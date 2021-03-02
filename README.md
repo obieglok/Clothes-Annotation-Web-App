@@ -1,7 +1,7 @@
 
 # Fano - Clothes Annotation Web App
 
-SWENG Group 2 Project to create a web app that can be used to annotate images of clothes that have text printed on them
+SWENG Group 2 Project to create a web app that can be used to annotate images of clothes that have text printed on them. In order to run this project, please make sure you have Node js installed on your local machine.
 
 # Getting Started with Fano
 
@@ -10,6 +10,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+
+## `npm install`
+
+Install all the app's missing dependencies to that the project can be compiled and run in the browser (see below).
 
 ### `npm start`
 
