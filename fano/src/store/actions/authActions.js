@@ -1,8 +1,9 @@
+import { firestoreReducer } from "redux-firestore";
+
 export const signIn = (credentials) => {
-    return (dispatch, getState, { getFirebase }) => {
+    return (dispatch, getState, { getFirebase, getFirestore }) => {
 
-        const firebase = getFirebase();
-
+        
         firebase.auth().signInWithEmailAndPassword(
             credentials.email,
             credentials.password
@@ -14,3 +15,30 @@ export const signIn = (credentials) => {
 
     }
 }
+
+export const signOut = () => {
+    return (dispatch, getState, { getFirebase, getFirestore }) => {
+
+        const firebase = getFirebase();
+        firebase.auth().signOut()
+        .then(() => {
+            dispatch({ type: "SIGNOUT_SUCCESS" })
+        }).catch((err) => {
+            dispatch({ type: "SIGNOUT_ERROR", err })
+        })
+    }
+}
+
+// TODO signUp function
+export const signUp = (email, password, firstName, lastName) => {
+    return (dispatch, getState, { getFirebase, getFirestore }) => {
+        
+    }
+}
+
+// TODO makeAdmin function
+
+// TODO removeAdmin
+
+
+
