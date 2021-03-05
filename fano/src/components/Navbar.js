@@ -15,17 +15,17 @@ class Navbar extends Component {
                         <a href="#!" className=" brand-logo " id="brand">Fano</a>
                         <a href="#" data-target="mobile-demo" className=" sidenav-trigger right"><i className=" material-icons">menu</i></a>
                         <ul className="right hide-on-med-and-down">
-                            <li><Link href="/">Home</Link></li>
-                            <li><Link href="/about">About</Link></li>
-                            <li><Link href="/contact">Contact</Link></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/about">About</Link></li>
+                            <li><Link to="/contact">Contact</Link></li>
                         </ul>
                     </div>
                 </nav>
                 
                 <ul className="sidenav " id="mobile-demo">
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="/about">About</Link></li>
-                    <li><Link href="/contact">Contact</Link></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
                 </ul>
 
             </div>
