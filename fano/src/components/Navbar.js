@@ -12,7 +12,7 @@ class Navbar extends Component {
             <div>
                 <nav  className="blue lighten-3">
                     <div className="nav-wrapper">
-                        <a href="#!" className=" brand-logo " id="brand">Fano</a>
+                        <a href="#!" className=" left " id="brand">Fano</a>
                         <a href="#" data-target="mobile-demo" className=" sidenav-trigger right"><i className=" material-icons">menu</i></a>
                         <ul className="right hide-on-med-and-down">
                             <li><Link to="/">Home</Link></li>

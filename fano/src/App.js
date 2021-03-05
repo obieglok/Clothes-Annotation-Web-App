@@ -16,7 +16,6 @@ function App() {
         <Route path='/about' component ={About} />
         <Route path='/contact' component ={Contact} />
       </Switch>
-        <h3>Work in Progress</h3>
       <Footer/>
       </div>
     </BrowserRouter>
