@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#brand{
+  color: white;
+  font-size: 50px;
+  font-family:'Roboto', sans-serif;
+  font-weight: 700;
+  text-shadow: 1.5px 1.5px 1.5px rgb(59, 59, 59);
+}
+
+nav ul li{
+  text-shadow: 2px 2px 2px rgb(59, 59, 59);
+}
