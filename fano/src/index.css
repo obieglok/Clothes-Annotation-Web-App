@@ -23,3 +23,12 @@ code {
 nav ul li{
   text-shadow: 2px 2px 2px rgb(59, 59, 59);
 }
+footer {
+  position:  absolute;
+  bottom: 0;
+  width: 100%;
+}
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
