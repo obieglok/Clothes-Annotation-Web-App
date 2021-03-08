@@ -3,14 +3,8 @@ const admin = require('firebase-admin');
 const unzipper = require('unzipper');
 admin.initializeApp();
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
 
+// REF: see [https://leolabs.org/blog/firebase-cloud-functions-unzip-files]
 exports.unpackZip = functions
     .runWith({timeoutSeconds: 300})
     .storage.bucket()
@@ -28,7 +22,9 @@ exports.unpackZip = functions
                                                   .bucket()
                                                   .file(`${file.name.replace('.', '_')}/${entry.path}`)
                         entry.pipe(destination.createWriteStream())
+                        // TODO: create new entry in database with image metadata
                   })
                   .promise()
         await file.delete()
+
     })
