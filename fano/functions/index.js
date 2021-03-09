@@ -10,7 +10,7 @@ exports.unpackZip = functions
     .storage.bucket()
     .object()
     .onFinalize(async (obj) => {
-        const file = firebase.storage().bucket(obj.bucket).file(obj.name)
+        const file = admin.storage().bucket(obj.bucket).file(obj.name)
 
         // only deal with ZIP archives
         if (!file.name.endsWith('.zip')) return
@@ -18,7 +18,7 @@ exports.unpackZip = functions
         await file.createReadStream()
                   .pipe(unzipper.Parse())
                   .on('entry', entry => {
-                        const destination = firebase.storage()
+                        const destination = admin.storage()
                                                   .bucket()
                                                   .file(`${file.name.replace('.', '_')}/${entry.path}`)
                         entry.pipe(destination.createWriteStream())
@@ -26,5 +26,4 @@ exports.unpackZip = functions
                   })
                   .promise()
         await file.delete()
-
     })
