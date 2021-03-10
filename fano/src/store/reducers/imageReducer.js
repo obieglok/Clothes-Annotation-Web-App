@@ -1,6 +1,7 @@
 const initState = {
     uploadError: null,
-    uploadState: null
+    uploadState: null,
+    annotationError: null
 }
 
 const authReducer = (state = initState, action) => {
@@ -13,7 +14,7 @@ const authReducer = (state = initState, action) => {
                 uploadError: null,
                 uploadState: "started"
             }
-        case "IMAGES_UPLOAD_SUCCESFUL":
+        case "IMAGES_UPLOAD_SUCCESSFUL":
             console.log("image upload successful")
             return {
                 ...state,
@@ -27,6 +28,19 @@ const authReducer = (state = initState, action) => {
                 ...state,
                 uploadError: action.err,
                 uploadState: null
+            }
+        case "ANNOTATION_COMMIT_SUCCESSFUL":
+            console.log("annotation commit successful")
+            return {
+                ...state,
+                annotationError: null
+            }
+        case "ANNOTATION_COMMIT_ERROR":
+            console.log("annotation commit error")
+            console.log(action.err)
+            return {
+                ...state,
+                annotationError: action.err
             }
         default:
             return state
