@@ -84,4 +84,5 @@ export const uploadImages = (file) => {
         catch (err) {
             dispatch({ type: "IMAGES_UPLOAD_ERROR", err })
         }
+    }
 }
