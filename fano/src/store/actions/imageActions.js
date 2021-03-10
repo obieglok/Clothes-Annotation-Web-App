@@ -1,6 +1,31 @@
-// TODO fetchNextImage
-
-// TODO newAnnotation
+/*
+Fetches next image URL nad ID. 
+Places it in Redux store
+*/
+export const fetchNextImage = () => {
+    return async (dispatch, getState, { getFirebase, getFirestore }) => {
+        const firestore = getFirestore()
+        const firebase = getFirebase()
+        
+        var query = firestore.collection("images")
+                             .limit(1)
+                             .orderBy(annotationsCounter)
+        try {
+            const image = await query.get()
+            if (image.exists) {
+                const {imageName, id} = image.data()
+                // consider refactoring to use gs// url to reference object
+                const imageUrl = await firebase.storage().ref()
+                                               .child("images").child(imageName)
+                                               .getDownloadURL()
+                dispatch({type: "IMAGE_FETCH_SUCCESSFUL", imageUrl, imageId: id})
+            }
+        }
+        catch (err) {
+            dispatch({type: "IMAGE_FETCH_ERROR", imageUrl: null, imageId:null, err})
+        }
+    }
+}
 
 /*
 Commits annotation of an image to database and updates annotation counters
@@ -21,7 +46,7 @@ export const commitAnnotation = (annotation) => {
         const userId = state.firebase.auth.uid
         const {imageId, content} = annotation
         try {
-           // crerate new annotation doc
+           // create new annotation doc
             await firestore.collection("images").doc(imageId)
                            .collection("annotations").add({
                                imageId,
@@ -31,7 +56,7 @@ export const commitAnnotation = (annotation) => {
                            })
             // this bit could be implemented as cloud function (more appropriate)
             await firestore.collection("images").doc(imageId).update({
-                annotationCounter: firebase.firestore.FieldValue.increment(1)
+                annotationsCounter: firebase.firestore.FieldValue.increment(1)
             })
             await firestore.collection("users").doc(userId).update({
                 annotationsCounter: firebase.firestore.FieldValue.increment(1)
@@ -41,6 +66,7 @@ export const commitAnnotation = (annotation) => {
         catch (err) {
             dispatch({ type: "ANNOTATION_COMMIT_ERROR", err })
         }
+    }
 }
 
 export const uploadImages = (file) => {
