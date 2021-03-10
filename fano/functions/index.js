@@ -18,11 +18,23 @@ exports.unpackZip = functions
         await file.createReadStream()
                   .pipe(unzipper.Parse())
                   .on('entry', entry => {
+                        const filePath = `images/${entry.path}`
                         const destination = admin.storage()
                                                   .bucket()
-                                                  .file(`${file.name.replace('.', '_')}/${entry.path}`)
+                                                  .file(filePath)
                         entry.pipe(destination.createWriteStream())
-                        // TODO: create new entry in database with image metadata
+                        
+                        // Create database record
+                        admin.firestore().collection("images").add(
+                            {
+                                imageName: entry.path,
+                                imageURL: filePath,
+                                annotations: 0
+                            }
+                        ).then(() => {
+                            console.log("database record created")
+                        })
+                        
                   })
                   .promise()
         await file.delete()
