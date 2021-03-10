@@ -1,6 +1,8 @@
 const initState = {
     uploadError: null,
     uploadState: null,
+    fetchError: null,
+    fetchedImage: null,
     annotationError: null
 }
 
@@ -41,6 +43,24 @@ const authReducer = (state = initState, action) => {
             return {
                 ...state,
                 annotationError: action.err
+            }
+        case "IMAGE_FETCH_SUCCESSFUL":
+            console.log(`image ${action.imageId} with url ${action.imageUrl} fetched succesfully`)
+            return {
+                ...state,
+                fetchedImage: {
+                    imageId: action.imageId,
+                    imageUrl: action.imageUrl
+                },
+                fetchError: null
+            }
+        case "IMAGE_FETCH_ERROR":
+            console.log("image fetch error")
+            console.log(action.err)
+            return {
+                ...state,
+                fetchedImage: null,
+                fetchError: action.err
             }
         default:
             return state
