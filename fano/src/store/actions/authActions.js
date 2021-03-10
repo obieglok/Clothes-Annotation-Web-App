@@ -36,6 +36,8 @@ export const signUp = (email, password, firstName, lastName) => {
     }
 }
 
+//Updated version from fork 
+
 // TODO makeAdmin function
 
 // TODO removeAdmin
