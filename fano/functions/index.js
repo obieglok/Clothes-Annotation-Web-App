@@ -29,7 +29,7 @@ exports.unpackZip = functions
                             {
                                 imageName: entry.path,
                                 imageURL: filePath,
-                                annotations: 0
+                                annotationsCounter: 0
                             }
                         ).then(() => {
                             console.log("database record created")
