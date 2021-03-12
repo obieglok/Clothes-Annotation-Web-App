@@ -19,7 +19,8 @@ handleChange = (e) => {
 
 handleSubmit = (e) => {
     e.preventDefault()
-    this.props.signIn(this.state)
+    console.log(this.state)
+    this.props.signUp(this.state)
 }
 
 
@@ -40,19 +41,19 @@ render(){
                 <div class="lgn-inner ">
                     <form class='frm1' onSubmit={this.handleSubmit}>
                         <div class='form-row'>
-                            <input type='text' class='form-c' name='email'
+                            <input type='text' class='form-c' name='firstName' id="firstName"
                             placeholder='first name' required onChange={this.handleChange}/>
                         </div>
                         <div class='form-row'>
-                            <input type='text' class='form-c'name='password'
+                            <input type='text' class='form-c'name='lastName' id="lastName"
                             placeholder='last name' required onChange={this.handleChange}/>
                         </div>
                         <div class='form-row'>
-                            <input type='email' class='form-c' name='email'
+                            <input type='email' class='form-c' name='email' id="email"
                             placeholder='email' required onChange={this.handleChange}/>
                         </div>
                         <div class='form-row'>
-                            <input type='password' class='form-c'name='password'
+                            <input type='password' class='form-c'name='password' id="password"
                             placeholder='enter a password' required onChange={this.handleChange}/>
                         </div>
                         <div class='form-row'>
@@ -62,7 +63,7 @@ render(){
                         
                         <div class='form-row-btn'>
                             <div class='lgn-c'>
-                                <button submit={this.handleSubmisson} class='lgn-btn'
+                                <button submit={this.handleSubmit} class='lgn-btn'
                                 > Create an account</button>
                             </div>
 
