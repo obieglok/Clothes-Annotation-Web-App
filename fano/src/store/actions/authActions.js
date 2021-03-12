@@ -1,10 +1,8 @@
-import { firestoreReducer } from "redux-firestore";
-
 export const signIn = (credentials) => {
     return (dispatch, getState, { getFirebase, getFirestore }) => {
 
         const firebase = getFirebase()
-        
+
         firebase.auth().signInWithEmailAndPassword(
             credentials.email,
             credentials.password
