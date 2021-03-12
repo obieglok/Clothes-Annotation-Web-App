@@ -5,11 +5,7 @@ import {connect} from 'react-redux'
 import {signUp} from '../store/actions/authActions'
 import { Redirect } from 'react-router-dom'
 
-<<<<<<< Updated upstream
-class register extends react.Component{
-=======
 class Register extends react.Component{
->>>>>>> Stashed changes
 state={
     email:'',
     password:''
