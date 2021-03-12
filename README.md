@@ -50,7 +50,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### `firebase deploy`
 
-**Note: should only be used by backend team to deploy changes to Firebase server instance
+**Note: should only be used by backend team to deploy changes to Firebase server instance**
 
 Deploys current version of web app to hosting services and updates Cloud Functions.
 

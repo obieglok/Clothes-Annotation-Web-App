@@ -1,8 +1,9 @@
+import { firestoreReducer } from "redux-firestore";
+
 export const signIn = (credentials) => {
     return (dispatch, getState, { getFirebase, getFirestore }) => {
 
-        const firebase = getFirebase()
-
+        
         firebase.auth().signInWithEmailAndPassword(
             credentials.email,
             credentials.password
@@ -29,33 +30,11 @@ export const signOut = () => {
 }
 
 // TODO signUp function
-export const signUp = (newUser) => {
-  return (dispatch, getState, { getFirebase, getFirestore }) => {
-    getFirebase()
-      .auth()
-      .createUserWithEmailAndPassword(newUser.email, newUser.password)
-      .then(async (resp) => {
-        const newUserObject = {
-          ...newUser,
-          firstName: newUser.firstName,
-          lastName: newUser.lastName,
-        };
-
-        await getFirestore()
-          .collection("users")
-          .doc(resp.user.uid)
-          .set(newUserObject);
-      })
-      .then(() => {
-        dispatch({ type: "SIGNUP_SUCCESS" });
-      })
-      .catch((err) => {
-        dispatch({ type: "SIGNUP_SUCCESS", err });
-      });
-  };
-};
-
-//Updated version from fork 
+export const signUp = (email, password, firstName, lastName) => {
+    return (dispatch, getState, { getFirebase, getFirestore }) => {
+        
+    }
+}
 
 // TODO makeAdmin function
 
