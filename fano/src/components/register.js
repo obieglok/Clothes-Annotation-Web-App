@@ -5,7 +5,11 @@ import {connect} from 'react-redux'
 import {signUp} from '../store/actions/authActions'
 import { Redirect } from 'react-router-dom'
 
+<<<<<<< Updated upstream
 class register extends react.Component{
+=======
+class Register extends react.Component{
+>>>>>>> Stashed changes
 state={
     email:'',
     password:''
@@ -93,7 +97,11 @@ render(){
         }
     }
     
+<<<<<<< Updated upstream
     export default connect(mapStateToProps, mapDispatchToProps)(register)
+=======
+    export default connect(mapStateToProps, mapDispatchToProps)(Register)
+>>>>>>> Stashed changes
     
   
     {/* <label for="fname">First name:</label><br/>
