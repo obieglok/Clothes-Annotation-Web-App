@@ -97,11 +97,7 @@ render(){
         }
     }
     
-<<<<<<< Updated upstream
-    export default connect(mapStateToProps, mapDispatchToProps)(register)
-=======
     export default connect(mapStateToProps, mapDispatchToProps)(Register)
->>>>>>> Stashed changes
     
   
     {/* <label for="fname">First name:</label><br/>
