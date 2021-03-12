@@ -36,7 +36,7 @@ export const signUp = (newUser) => {
       .createUserWithEmailAndPassword(newUser.email, newUser.password)
       .then(async (resp) => {
         const newUserObject = {
-          ...newUser,
+          email: newUser.email,
           firstName: newUser.firstName,
           lastName: newUser.lastName,
         };
