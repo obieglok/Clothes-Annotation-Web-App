@@ -3,15 +3,17 @@ import { grid } from '@material-ui/core';
 import {connect} from 'react-redux'
 import {signIn} from '../store/actions/authActions'
 import { Redirect } from 'react-router-dom'
-import {firebase}
 
 
 
-class SignIn extends react.Component{
-state={
-    email:'',
-    password:''
-}
+
+class SignIn extends react.Component {
+
+    state = {
+        email:'',
+        password:''
+
+    }
 
 handleChange = (e) => {
     this.setState({
