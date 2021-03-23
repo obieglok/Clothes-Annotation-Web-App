@@ -13,6 +13,7 @@ var firebaseConfig = {
     storageBucket: "fano-experiments.appspot.com",
     messagingSenderId: "486049838778",
     appId: "1:486049838778:web:fcb7726c3ed8084c49b483"
+
 };
 
 firebase.initializeApp(firebaseConfig)
