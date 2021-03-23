@@ -7,17 +7,16 @@ import 'firebase/firebase-storage'
 
 // Initialize Firebase
 var firebaseConfig = {
-    apiKey: "AIzaSyBBKyWDWoFa0uOQdDhfEgbDpD24ykvOWCE",
-    authDomain: "fano-6b50c.firebaseapp.com",
-    projectId: "fano-6b50c",
-    storageBucket: "fano-6b50c.appspot.com",
-    messagingSenderId: "204958689363",
-    appId: "1:204958689363:web:28270c5954d07889bf7ea6",
-    measurementId: "G-TJN187GGTM"
-  };
+    apiKey: "AIzaSyCylhU-a79i_Hoqvqv6Cof8chZqPRunow4",
+    authDomain: "fano-experiments.firebaseapp.com",
+    projectId: "fano-experiments",
+    storageBucket: "fano-experiments.appspot.com",
+    messagingSenderId: "486049838778",
+    appId: "1:486049838778:web:fcb7726c3ed8084c49b483"
+};
 
-  firebase.initializeApp(firebaseConfig)
-  firebase.firestore()
-  firebase.storage()
+firebase.initializeApp(firebaseConfig)
+firebase.firestore()
+firebase.storage()
 
-  export default firebase
+export default firebase
