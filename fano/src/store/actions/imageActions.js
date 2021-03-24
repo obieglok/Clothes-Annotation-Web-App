@@ -67,6 +67,27 @@ export const commitAnnotation = (annotation) => {
     }
 }
 
+export const exportAnnotations = () => {
+    return (dispatch, getState, { getFirebase, getFirestore }) => {
+        const firebase = getFirebase()
+        console.log("export annotations called")
+        try {
+            const exportAnnotationsFunc = firebase.functions().httpsCallable('exportAnnotations')
+
+            exportAnnotationsFunc().then(result => {
+                console.log(result)
+                const blob = new Blob([JSON.stringify(result, null, 2)])
+                dispatch({ type: "ANNOTATION_EXPORT_SUCCESSFUL", blob })
+
+            })
+        } catch (err) {
+            console.log(err)
+        }
+
+
+    }
+}
+
 export const uploadImages = (file) => {
     return async(dispatch, getState, { getFirebase, getFirestore }) => {
 

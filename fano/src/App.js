@@ -8,6 +8,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import SignIn from './components/SignIn';
 import Register from './components/Register';
+import  Test  from './components/Test';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/register' component ={Register} />
         <Route path='/about' component ={About} />
         <Route path='/contact' component ={Contact} />
+        <Route path='/test' component ={Test} />
         <Route exact path='/' component ={Home} />
       </Switch>
       <Footer/>
