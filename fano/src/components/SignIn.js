@@ -41,11 +41,11 @@ handleSubmit = (e) => {
                         <div className="lgn-inner ">
                             <form className='frm1' onSubmit={this.handleSubmit}>
                                 <div className='form-row'>
-                                    <input type='email' className='form-c' name='email'
+                                    <input type='email' className='form-c' name='email' id='email'
                                     placeholder='email' required onChange={this.handleChange}/>
                                 </div>
                                 <div className='form-row'>
-                                    <input type='password' className='form-c'name='password'
+                                    <input type='password' className='form-c'name='password' id='password'
                                     placeholder='password' required onChange={this.handleChange}/>
                                 </div>
                                 <div className='form-row-btn'>
