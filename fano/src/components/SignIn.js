@@ -32,47 +32,47 @@ handleSubmit = (e) => {
             return <Redirect to='/' />
         }
         return(
-            <container class='main-c'>
-                    <div class='fano-text'>
+            <container className='main-c'>
+                    <div className='fano-text'>
                         <h1>Annotate clothes.
                             bring them to life</h1>
                     </div>
-                    <div class='lgn details'>
-                        <div class="lgn-inner ">
-                            <form class='frm1'>
-                                <div class='form-row'>
-                                    <input type='email' class='form-c' name='email'
+                    <div className='lgn details'>
+                        <div className="lgn-inner ">
+                            <form className='frm1'submit={this.handleSubmit}>
+                                <div className='form-row'>
+                                    <input type='email' className='form-c' name='email'
                                     placeholder='email' required onChange={this.handleChange}/>
                                 </div>
-                                <div class='form-row'>
-                                    <input type='password' class='form-c'name='password'
+                                <div className='form-row'>
+                                    <input type='password' className='form-c'name='password'
                                     placeholder='password' required onChange={this.handleChange}/>
                                 </div>
-                                <div class='form-row-btn'>
-                                    <div class='lgn-c'>
-                                        <button submit={this.handleSubmisson} class='lgn-btn'
+                                <div className='form-row-btn'>
+                                    <div className='lgn-c'>
+                                        <button  className='lgn-btn'
                                         > Login </button>
                                     </div>
                                 </div>
-                            <div class="lgn-row-2">
-                                <div class="sid">
+                            <div className="lgn-row-2">
+                                <div className="sid">
                                     <span>Or continue with</span>
                                 </div>
                             </div>
-                            <div class="lgn-row-logo">
-                                <div class="app-logos">
+                            <div className="lgn-row-logo">
+                                <div className="app-logos">
                                     <a href='#'>
-                                        <div class="app-lg a">
+                                        <div className="app-lg a">
                                             <span>a</span>
                                         </div>
                                     </a>
                                     <a href='#'>    
-                                        <div class="app-lg a">
+                                        <div className="app-lg a">
                                             <span>a</span>
                                         </div>
                                     </a>
                                     <a href='#'>
-                                        <div class="app-lg a">
+                                        <div className="app-lg a">
                                             <span>a</span>
                                         </div>
                                     </a>
@@ -80,8 +80,8 @@ handleSubmit = (e) => {
                                 <div className="col s12 red-text center">
                                 {authError && <p>Login error. Please check your details</p> }
                                 </div>
-                                <div class="regis">
-                                    <span>Don't an account? </span>
+                                <div className="regis">
+                                    <span>Don't have an account? </span>
                                     <a href='/register'><span>sign up here.</span></a>
                                 </div>
                             </div>
