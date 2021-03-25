@@ -1,6 +1,12 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import { Redirect } from 'react-router-dom'
 
-const About = () => {
+ const About = (props) => {
+    const {auth} = props
+    if (!auth.uid) {
+        return <Redirect to='/' />
+    }
     return (
         <div className="container about">
             <h1 className="header">About Us</h1>
@@ -26,5 +32,10 @@ const About = () => {
         </div>
     )
 }
+const mapStateToProps = (state) =>{
+    return{
+        auth: state.firebase.auth,
+    }
+}
 
-export default About
+export default connect(mapStateToProps)(About);
