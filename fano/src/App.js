@@ -9,7 +9,8 @@ import Contact from './components/Contact';
 import SignIn from './components/SignIn';
 import Register from './components/Register';
 import  Test  from './components/Test';
-
+import UploadFile from './components/AdminDashboard/UploadFile';
+import AdminDashboard from './components/AdminDashboard/AdminDashboard';
 function App() {
   return (
     <BrowserRouter>
@@ -22,6 +23,8 @@ function App() {
         <Route path='/contact' component ={Contact} />
         <Route path='/test' component ={Test} />
         <Route exact path='/' component ={Home} />
+        <Route exact path='/uploadFile' component ={UploadFile} />
+        <Route exact path='/adminDash' component ={AdminDashboard} />
       </Switch>
       <Footer/>
       </div>
