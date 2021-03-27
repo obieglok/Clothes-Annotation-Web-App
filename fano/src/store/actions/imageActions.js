@@ -6,21 +6,25 @@ export const fetchNextImage = () => {
     return async(dispatch, getState, { getFirebase, getFirestore }) => {
         const firestore = getFirestore()
         const firebase = getFirebase()
-
+        console.log("fetching")
         var query = firestore.collection("images")
             .limit(1)
             .orderBy("annotationsCounter")
         try {
             const image = await query.get()
-            if (image.exists) {
-                const { imageName, id } = image.data()
+            if (image.docs) {
+                const { imageName } = image.docs[0].data()
+                const id = image.docs[0].id
                     // consider refactoring to use gs// url to reference object
                 const imageUrl = await firebase.storage().ref()
                     .child("images").child(imageName)
                     .getDownloadURL()
                 dispatch({ type: "IMAGE_FETCH_SUCCESSFUL", imageUrl, imageId: id })
+            } else {
+                console.log("not here")
             }
         } catch (err) {
+            console.log(err)
             dispatch({ type: "IMAGE_FETCH_ERROR", imageUrl: null, imageId: null, err })
         }
     }
