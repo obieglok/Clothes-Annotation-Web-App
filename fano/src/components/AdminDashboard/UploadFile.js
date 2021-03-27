@@ -5,24 +5,29 @@ import { Redirect ,withRouter} from 'react-router-dom'
 
 class UploadFile extends Component {
     state = {
-        file : null,
+        file: "",
         name:''
     }
     handleChange = (e) => {
         if(e.target.id =='file'){
             this.setState({
                 [e.target.id]: e.target.files[0]
+            }, () => {
+                console.log(this.state)
             })
         }
-        this.setState({
-            [e.target.id]: e.target.value
-        })
+        else {
+            this.setState({
+                [e.target.id]: e.target.value
+            })
+        }
+        
     }
     
     handleSubmit = (e) => {
-        console.log(this.state);
         e.preventDefault()
-        this.props.uploadImages(this.state);
+        console.log(this.state);
+        this.props.uploadImages(this.state.file);
         this.props.history.push('/');
      
     }

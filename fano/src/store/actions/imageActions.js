@@ -91,12 +91,13 @@ export const exportAnnotations = () => {
 export const uploadImages = (file) => {
     return async(dispatch, getState, { getFirebase, getFirestore }) => {
 
-        const firestore = getFirestore()
+        //const firestore = getFirestore()
         const firebase = getFirebase()
-
+        console.log(file)
         try {
             dispatch({ type: "IMAGES_UPLOAD_START" })
-            var fileRef = firebase.storage().ref().child(file.name)
+            console.log(file.name)
+            const fileRef = firebase.storage().ref().child(file.name)
             const { snapshot, error } = await fileRef.put(file)
             dispatch({ type: "IMAGES_UPLOAD_SUCCESSFUL" })
         } catch (err) {
