@@ -32,7 +32,23 @@ export const Test = (props) => {
             <div>
                 <img src={props.fetchedImage && props.fetchedImage.imageUrl} alt=""/>
             </div>
+
+            <div class="annotation row">
+                <form class= "annot_row">
+                    <label for="fname">Enter the visible text.:</label>
+                    <input type="text" id="disp text" name="disp text"></input>
+                    <label for="fname">Enter the visible color on the shirt.</label>
+                    <input type="text" id="disp color" name="disp color"></input>
+                    <button className="btn"
+                        onClick={() => props.exportAnnotations()}>
+                    Submit annotations
+                </button>
+                </form>
+            </div>
+        
+        
         </div>
+        
 
     )
 }
