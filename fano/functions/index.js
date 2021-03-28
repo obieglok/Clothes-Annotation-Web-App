@@ -3,6 +3,22 @@ const admin = require('firebase-admin');
 const unzipper = require('unzipper');
 admin.initializeApp();
 
+//auth info
+exports.addAdminRole = functions.https.onCall((data, context) => {
+    //get user
+    return admin.auth().getUserByEmail(data.email).then(user => {
+        return admin.auth().setCustomUserClaims(user.uid,{
+            admin: true
+        });
+    }).then(()=>{
+        return {
+            message: 'Success ${data.email} has been made an admin'
+        }
+    }).catch(err => {
+        return err;
+    });
+});
+
 
 // REF: see [https://leolabs.org/blog/firebase-cloud-functions-unzip-files]
 exports.unpackZip = functions

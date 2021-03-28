@@ -59,7 +59,40 @@ export const signUp = (newUser) => {
 
 // TODO makeAdmin function
 
+
+//this should reference a form in index.html called adminForm
+const adminForm = documents.querySelector('.admin-actions');
+adminForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  //reference to adminEmail on front end
+  const adminEmail = document.querySelector('#admin-email').value;
+  const addAdminRole = functions .httpsCallable('addAdminRole');
+  addAdminRole({email: adminEmail}).then(result => {
+    console.log(result);
+  });
+});
+
+
+auth.OnAuthStateChanged(user => {
+  if (user) {
+    user.getIdTokenResult().then(getIdTokenResult => {
+      // attach admin property to user, if user not admin user property will be null or undefined
+      user.admin = getIdTokenResult.claims.admin
+    })
+    //Setup UI
+  } else {
+
+  }
+ 
+  });
+
+
+
+
+
+   
 // TODO removeAdmin
+
 
 
 
