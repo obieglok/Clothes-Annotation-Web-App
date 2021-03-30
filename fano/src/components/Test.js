@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { makeAdmin } from '../store/actions/authActions'
 import { exportAnnotations, fetchNextImage } from '../store/actions/imageActions'
 
 
@@ -45,6 +46,15 @@ export const Test = (props) => {
                 </button>
                 </form>
             </div>
+
+            <div>
+                <button className="btn"
+                        onClick={() => props.makeAdmin({
+                            email: "sam.alarco@gmail.com"
+                        })}>
+                    Make Admin
+                </button>
+            </div>
         
         
         </div>
@@ -63,7 +73,8 @@ const mapDispatchToProps = (dispatch) => {
         exportAnnotations: () => {
             dispatch(exportAnnotations())
         },
-        fetchNextImage: () => dispatch(fetchNextImage())
+        fetchNextImage: () => dispatch(fetchNextImage()),
+        makeAdmin: (cred) => dispatch(makeAdmin(cred))
     }
 }
 

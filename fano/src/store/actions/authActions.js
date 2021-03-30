@@ -61,10 +61,10 @@ export const signUp = (newUser) => {
 export const makeAdmin = (credentials) => {
   return (dispatch, getState, { getFirebase, getFirestore }) => {
       const firebase = getFirebase()
-      firebase.auth().makeAdmin(
-          credentials.email,
-          credentials.password
-      ).then(() => {
+
+      const addAdminFunc = firebase.functions().httpsCallable('addAdminRole')
+      addAdminFunc(credentials).then((resp) => {
+          console.log(resp)
           dispatch({ type: "ADMIN_CREATED" })
       }).catch((err) => {
           dispatch({ type: "NOT POSSIBLE TO CREATE ADMIN", err })

@@ -1,6 +1,6 @@
 import firebase from 'firebase/app'
 import 'firebase/firestore'
-import 'firebase/functions'
+import 'firebase/firebase-functions'
 import 'firebase/auth'
 import 'firebase/firebase-storage'
 
@@ -19,5 +19,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 firebase.firestore()
 firebase.storage()
+firebase.functions()
 
 export default firebase
