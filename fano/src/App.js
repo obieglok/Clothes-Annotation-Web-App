@@ -1,3 +1,4 @@
+
 import './App.css';
 import Navbar from './components/Navbar.js';
 import {BrowserRouter, Route ,Switch } from 'react-router-dom';
@@ -21,8 +22,10 @@ function App() {
         <Route path='/about' component ={About} />
         <Route path='/contact' component ={Contact} />
         <Route path='/dashboard' component ={AdminDashboard} />
-        <Route exact path='/uploadFile' component ={UploadFile} />
+        <Route path='/test' component ={Test} />
         <Route exact path='/' component ={Home} />
+        <Route exact path='/uploadFile' component ={UploadFile} />
+        <Route exact path='/adminDash' component ={AdminDashboard} />
       </Switch>
       <Footer/>
       </div>
