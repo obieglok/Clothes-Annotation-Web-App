@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+import AdminDashboard from './components/AdminDashboard';
 import SignIn from './components/SignIn';
 import Register from './components/Register';
 import  Test  from './components/Test';
@@ -21,7 +22,11 @@ function App() {
         <Route path='/register' component ={Register} />
         <Route path='/about' component ={About} />
         <Route path='/contact' component ={Contact} />
+<<<<<<< Updated upstream
         <Route path='/test' component ={Test} />
+=======
+        <Route path='/dashboard' component ={AdminDashboard} />
+>>>>>>> Stashed changes
         <Route exact path='/' component ={Home} />
         <Route exact path='/uploadFile' component ={UploadFile} />
         <Route exact path='/adminDash' component ={AdminDashboard} />
