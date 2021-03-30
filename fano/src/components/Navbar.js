@@ -70,9 +70,13 @@ const mapStateToProps = (state) =>{
     return{
         auth: state.firebase.auth
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> parent of bcf0861 (Merge pull request #39 from iamiraklis/userTableDashboard)
+=======
+        
+>>>>>>> parent of 1317e71 (user table)
     }
 }
    

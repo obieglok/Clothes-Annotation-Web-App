@@ -23,6 +23,7 @@ function App() {
         <Route path='/contact' component ={Contact} />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Route path='/dashboard' component ={AdminDashboard} />
 =======
 <<<<<<< Updated upstream
@@ -34,6 +35,9 @@ function App() {
 =======
         <Route path='/test' component ={Test} />
 >>>>>>> parent of bcf0861 (Merge pull request #39 from iamiraklis/userTableDashboard)
+=======
+        <Route path='/test' component ={Test} />
+>>>>>>> parent of 1317e71 (user table)
         <Route exact path='/' component ={Home} />
         <Route exact path='/uploadFile' component ={UploadFile} />
         <Route exact path='/adminDash' component ={AdminDashboard} />
