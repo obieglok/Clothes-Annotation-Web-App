@@ -30,6 +30,18 @@ export const authReducer = (state = initState, action) => {
                 ...state,
                 authError: action.err
             }
+        case "ADMIN_SUCCESS":
+            console.log("admin created successfully ")
+            return {
+                ...state,
+                authError: null
+            }
+        case "ADMIN_ERROR":
+            console.log("admin creation error")
+            return {
+                ...state,
+                authError: action.err
+            }
         default:
             return state
     }
