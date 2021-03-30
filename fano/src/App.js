@@ -21,23 +21,8 @@ function App() {
         <Route path='/register' component ={Register} />
         <Route path='/about' component ={About} />
         <Route path='/contact' component ={Contact} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         <Route path='/dashboard' component ={AdminDashboard} />
-=======
-<<<<<<< Updated upstream
         <Route path='/test' component ={Test} />
-=======
-        <Route path='/dashboard' component ={AdminDashboard} />
->>>>>>> Stashed changes
->>>>>>> parent of cdbf828 (user table update)
-=======
-        <Route path='/test' component ={Test} />
->>>>>>> parent of bcf0861 (Merge pull request #39 from iamiraklis/userTableDashboard)
-=======
-        <Route path='/test' component ={Test} />
->>>>>>> parent of 1317e71 (user table)
         <Route exact path='/' component ={Home} />
         <Route exact path='/uploadFile' component ={UploadFile} />
         <Route exact path='/adminDash' component ={AdminDashboard} />

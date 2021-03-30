@@ -6,7 +6,6 @@ import SignedOutLinks from './SignedOutLinks';
 import {connect} from 'react-redux'
 
 class Navbar extends Component {
-<<<<<<< HEAD
     render() {
         return (
             <div>
@@ -35,31 +34,6 @@ class Navbar extends Component {
         )
     }
 
-=======
-    render(){
-        const {auth} = this.props;
-        const links = auth.uid ? <SignedInLinks /> : <SignedOutLinks/>
-            return (
-                <div>
-                    <nav  className="blue lighten-3">
-                        <div className="nav-wrapper">
-                            <a href="/" className=" left " id="brand">Fano</a>
-                            <a href="#" data-target="mobile-demo" className=" sidenav-trigger right"><i className=" material-icons">menu</i></a>
-                            <ul className="right hide-on-med-and-down">
-                                {links}
-                            </ul>
-                        </div>
-                    </nav>
-                    
-                    <ul className="sidenav " id="mobile-demo">
-                        {links}
-                    </ul>
-
-                </div>
-
-            )
-    }
->>>>>>> parent of bcf0861 (Merge pull request #39 from iamiraklis/userTableDashboard)
     componentDidMount() {
         let sidenav = document.querySelector('#mobile-demo');
         M.Sidenav.init(sidenav, {edge:'right'});
@@ -69,14 +43,6 @@ const mapStateToProps = (state) =>{
     console.log(state);
     return{
         auth: state.firebase.auth
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        
->>>>>>> parent of bcf0861 (Merge pull request #39 from iamiraklis/userTableDashboard)
-=======
-        
->>>>>>> parent of 1317e71 (user table)
     }
 }
    
