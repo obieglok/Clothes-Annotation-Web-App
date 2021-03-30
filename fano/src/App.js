@@ -6,7 +6,6 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
-import AdminDashboard from './components/AdminDashboard';
 import SignIn from './components/SignIn';
 import Register from './components/Register';
 import  Test  from './components/Test';
@@ -23,6 +22,7 @@ function App() {
         <Route path='/about' component ={About} />
         <Route path='/contact' component ={Contact} />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Route path='/dashboard' component ={AdminDashboard} />
 =======
 <<<<<<< Updated upstream
@@ -31,6 +31,9 @@ function App() {
         <Route path='/dashboard' component ={AdminDashboard} />
 >>>>>>> Stashed changes
 >>>>>>> parent of cdbf828 (user table update)
+=======
+        <Route path='/test' component ={Test} />
+>>>>>>> parent of bcf0861 (Merge pull request #39 from iamiraklis/userTableDashboard)
         <Route exact path='/' component ={Home} />
         <Route exact path='/uploadFile' component ={UploadFile} />
         <Route exact path='/adminDash' component ={AdminDashboard} />
