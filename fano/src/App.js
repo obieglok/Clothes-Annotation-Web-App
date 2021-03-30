@@ -22,11 +22,7 @@ function App() {
         <Route path='/register' component ={Register} />
         <Route path='/about' component ={About} />
         <Route path='/contact' component ={Contact} />
-<<<<<<< Updated upstream
-        <Route path='/test' component ={Test} />
-=======
         <Route path='/dashboard' component ={AdminDashboard} />
->>>>>>> Stashed changes
         <Route exact path='/' component ={Home} />
         <Route exact path='/uploadFile' component ={UploadFile} />
         <Route exact path='/adminDash' component ={AdminDashboard} />
