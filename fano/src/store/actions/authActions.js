@@ -58,8 +58,30 @@ export const signUp = (newUser) => {
 //Updated version from fork 
 
 // TODO makeAdmin function
+export const makeAdmin = (credentials) => {
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+      const firebase = getFirebase()
+      firebase.auth().makeAdmin(
+          credentials.email,
+          credentials.password
+      ).then(() => {
+          dispatch({ type: "ADMIN_CREATED" })
+      }).catch((err) => {
+          dispatch({ type: "NOT POSSIBLE TO CREATE ADMIN", err })
+      })
 
+  }
+}
+
+
+
+
+
+
+
+   
 // TODO removeAdmin
+
 
 
 
