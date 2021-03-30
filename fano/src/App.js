@@ -22,7 +22,15 @@ function App() {
         <Route path='/register' component ={Register} />
         <Route path='/about' component ={About} />
         <Route path='/contact' component ={Contact} />
+<<<<<<< HEAD
         <Route path='/dashboard' component ={AdminDashboard} />
+=======
+<<<<<<< Updated upstream
+        <Route path='/test' component ={Test} />
+=======
+        <Route path='/dashboard' component ={AdminDashboard} />
+>>>>>>> Stashed changes
+>>>>>>> parent of cdbf828 (user table update)
         <Route exact path='/' component ={Home} />
         <Route exact path='/uploadFile' component ={UploadFile} />
         <Route exact path='/adminDash' component ={AdminDashboard} />
