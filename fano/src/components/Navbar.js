@@ -20,7 +20,7 @@ class Navbar extends Component {
                         </div>
                     </nav>
                     
-                    <ul className="sidenav " id="mobile-demo">
+                    <ul className="sidenav sidenav-close " id="mobile-demo">
                         {links}
                     </ul>
 
