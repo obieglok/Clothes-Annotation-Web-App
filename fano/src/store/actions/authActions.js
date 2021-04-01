@@ -39,6 +39,7 @@ export const signUp = (newUser) => {
           email: newUser.email,
           firstName: newUser.firstName,
           lastName: newUser.lastName,
+          annotationsCounter: 0
         };
 
         await getFirestore()
@@ -55,7 +56,6 @@ export const signUp = (newUser) => {
   };
 };
 
-//Updated version from fork 
 
 // TODO makeAdmin function
 export const makeAdmin = (credentials) => {

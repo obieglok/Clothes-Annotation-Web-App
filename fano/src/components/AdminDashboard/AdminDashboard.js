@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import UploadFile from './UploadFile'
 import AdminSideNav from './AdminSideNav';
+import UserTable from './UserTable'
+
 class AdminDashboard extends Component { 
     
     state ={
@@ -21,13 +23,16 @@ class AdminDashboard extends Component {
         return (
             <div>
                 <h1>
-                AdminDashboard Page
+                Admin Dashboard Page
                 </h1>
                 <br/>
                 <AdminSideNav toggleComponent={this.toggleComponent}/>
                 <div>
                     {this.getComponents(this.state.currentMode)}
                 </div>
+
+                <UserTable history={this.props.history}/>
+
             </div>
         )
     }

@@ -171,3 +171,15 @@ filter: blur(4px);
     background-color: whitesmoke;
   }
 }
+
+.card{
+  border-radius: 30px !important;
+}
+
+.userpage{
+  margin-top: 5rem;
+}
+
+.overview-card{
+  margin-top: 4rem;
+}
