@@ -29,7 +29,7 @@ class UserTable extends Component {
     }
     return (
       <div className="container">
-        <table class="highlight" id="dataTable">
+        <table class="highlight responsive-table" id="dataTable">
           <thead>
             <tr>
               <th> </th>
