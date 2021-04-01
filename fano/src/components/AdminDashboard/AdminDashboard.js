@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import UploadFile from './UploadFile'
+import UserTable from './UserTable'
 
 class AdminDashboard extends Component { 
     render(){
@@ -9,7 +10,7 @@ class AdminDashboard extends Component {
                 AdminDashboard Page
                 </h1>
                 <br/>
-                <UploadFile history={this.props.history}/>
+                <UserTable history={this.props.history}/>
             </div>
         )
     }
