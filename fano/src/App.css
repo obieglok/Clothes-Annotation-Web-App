@@ -183,9 +183,10 @@ filter: blur(4px);
 }
 .annot-img{
   margin-left: 10%;
-background-color: pink;
-padding: 10px;
+background-color: white;
+padding: 5px;
 float: left;
+
 }
 .annotation-row{
   margin: 25px;
@@ -214,7 +215,7 @@ margin: 10px;
  border-color: white;
  margin-top: 10px;
 }
-.lgn-btn active{
+.lgn-btn{
 background-color: white;
 }
 .annot-c{
