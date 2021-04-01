@@ -56,7 +56,6 @@ export const signUp = (newUser) => {
   };
 };
 
-//Updated version from fork 
 
 // TODO makeAdmin function
 export const makeAdmin = (credentials) => {
