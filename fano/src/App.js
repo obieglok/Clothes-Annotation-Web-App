@@ -8,10 +8,9 @@ import About from './components/About';
 import Contact from './components/Contact';
 import SignIn from './components/SignIn';
 import Register from './components/Register';
-import  Test  from './components/Test';
+import Test  from './components/Test';
 import UploadFile from './components/AdminDashboard/UploadFile';
 import AdminDashboard from './components/AdminDashboard/AdminDashboard';
-import Profile from './components/UserProfile';
 
 
 function App() {
@@ -29,7 +28,6 @@ function App() {
         <Route exact path='/' component ={Home} />
         <Route exact path='/uploadFile' component ={UploadFile} />
         <Route exact path='/adminDash' component ={AdminDashboard} />
-        <Route exact path='/profile' component ={Profile} />
       </Switch>
       <Footer/>
       </div>
