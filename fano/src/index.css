@@ -20,6 +20,9 @@ body {
 nav ul li{
   text-shadow: 2px 2px 2px rgb(59, 59, 59);
 }
+#mobile-demo{
+  max-width:150px;
+}
 footer {
   position:  absolute;
   bottom: 0;
