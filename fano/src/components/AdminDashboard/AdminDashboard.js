@@ -10,8 +10,8 @@ class AdminDashboard extends Component {
     };
     getComponents(currentMode) {
         const components ={
-            uploadComponent: <UploadFile/>,
-            usersComponent: null,
+            uploadComponent: <UploadFile history={this.props.history}/>,
+            userTableComponent: <UserTable history={this.props.history}/>,
             settingsComponent: null
         };
         return components[currentMode];
@@ -30,8 +30,6 @@ class AdminDashboard extends Component {
                 <div>
                     {this.getComponents(this.state.currentMode)}
                 </div>
-
-                <UserTable history={this.props.history}/>
 
             </div>
         )
