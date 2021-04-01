@@ -4,19 +4,33 @@ const unzipper = require('unzipper');
 admin.initializeApp();
 
 //auth info
-exports.addAdminRole = functions.https.onCall((data, context) => {
-    //get user
-    return admin.auth().getUserByEmail(data.email).then(user => {
-        return admin.auth().setCustomUserClaims(user.uid,{
+exports.addAdminRole = functions.https.onCall(async (data, context) => {
+    // check request is made by an admin
+    if (context.auth.token.admin !== true) {
+        return {error: 'only admins can add other admins, sucker'}
+    }
+    try {
+        //get user
+        const user = await admin.auth().getUserByEmail(data.email)
+        
+        // set admin claims
+        await admin.auth().setCustomUserClaims(user.uid, {
             admin: true
-        });
-    }).then(()=>{
+        })
+
+        // update database
+        await admin.firestore().collection('users').doc(user.uid).update({ 
+            isAdmin: true,
+        })
+        
+        // return success
         return {
-            message: 'Success ${data.email} has been made an admin'
+            message: `Success ${data.email} has been made an admin`
         }
-    }).catch(err => {
-        return err;
-    });
+    }
+    catch(err)  {
+        return err
+    }
 });
 
 
@@ -57,9 +71,9 @@ exports.unpackZip = functions
 exports.exportAnnotations = functions
     .https.onCall(async(data, context) => {
         // check request is made by an admin
-        /* if (context.auth.token.admin !== true) {
+        if (context.auth.token.admin !== true) {
             return { error: 'only admins can request export annotation' }
-        } */
+        }
         let resp = {}
         let annotations = {}
         try {
