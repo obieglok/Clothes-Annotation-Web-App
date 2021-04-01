@@ -39,6 +39,7 @@ export const signUp = (newUser) => {
           email: newUser.email,
           firstName: newUser.firstName,
           lastName: newUser.lastName,
+          annotationsCounter: 0
         };
 
         await getFirestore()
