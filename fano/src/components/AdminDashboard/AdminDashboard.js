@@ -7,7 +7,7 @@ class AdminDashboard extends Component {
         return (
             <div>
                 <h1>
-                AdminDashboard Page
+                Admin Dashboard Page
                 </h1>
                 <br/>
                 <UserTable history={this.props.history}/>
