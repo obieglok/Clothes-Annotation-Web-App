@@ -39,7 +39,7 @@ const UserProfile = (props) => {
           </div>
         </div>
       </div>
-      <Link to="/test">
+      <Link to="/annotate">
         <a class="waves-effect waves-light btn-large">
           <i class="material-icons right">arrow_forward</i>Annotate
         </a>
