@@ -5,6 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#root {
+  text-align: center;
+  
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 
@@ -23,11 +35,7 @@ nav ul li{
 #mobile-demo{
   max-width:150px;
 }
-footer {
-  position:  absolute;
-  bottom: 0;
-  width: 100%;
-}
+
 #page-container {
   position: relative;
   min-height: 100vh;
