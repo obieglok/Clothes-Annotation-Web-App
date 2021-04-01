@@ -148,3 +148,7 @@ filter: blur(4px);
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
+
+.cardSettings{
+  padding: 10%;
+}
