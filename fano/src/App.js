@@ -12,6 +12,7 @@ import  Test  from './components/Test';
 import UploadFile from './components/AdminDashboard/UploadFile';
 import AdminDashboard from './components/AdminDashboard/AdminDashboard';
 import Profile from './components/UserProfile';
+import annotate from './components/annotate';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route exact path='/uploadFile' component ={UploadFile} />
         <Route exact path='/adminDash' component ={AdminDashboard} />
         <Route exact path='/profile' component ={Profile} />
+        <Route exact path='/annotate' component ={annotate} />
       </Switch>
       <Footer/>
       </div>

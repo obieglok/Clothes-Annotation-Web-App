@@ -171,6 +171,65 @@ filter: blur(4px);
     background-color: whitesmoke;
   }
 }
+.annot-boxs{
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 250px 25px 250px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px 4px #e4e4e4;
+  
+}
+.annot-img{
+  margin-left: 10%;
+background-color: pink;
+padding: 10px;
+float: left;
+}
+.annotation-row{
+  margin: 25px;
+  padding: 25px;
+background-color: whitesmoke;
+float:right;
+border-radius: 20px;
+}
+.annot-txt{
+  font-size: large;
+  font-weight: 600;
+  color: black;  
+}
+/* .annot-btn{
+  
+  color: white;
+padding: 10px;
+margin: 10px;
+  border: #61dafb;
+} */
+
+.lgn-btn{
+  background-color: white;
+ padding: 5px;
+ border-radius: 5px 5px;
+ border-color: white;
+ margin-top: 10px;
+}
+.lgn-btn active{
+background-color: white;
+}
+.annot-c{
+background-color: white;
+padding: 10px;
+border-radius: 15px;
+}
+.annot_row input{
+  border-bottom: 1px solid white !important;
+  /* color: white !important; */
+}
+.annot_row input:active{
+  border-bottom: 1px solid white !important;
+  /* color: white !important; */
+}  
 
 .card{
   border-radius: 30px !important;
@@ -183,3 +242,4 @@ filter: blur(4px);
 .overview-card{
   margin-top: 4rem;
 }
+
