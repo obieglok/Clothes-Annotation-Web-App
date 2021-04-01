@@ -6,8 +6,21 @@ import UserTable from './UserTable'
 class AdminDashboard extends Component { 
     
     state ={
-        currentMode : 'uploadComponent'
+        currentMode : 'uploadComponent',
+        isDesktop: false
     };
+    componentDidMount() {
+        this.updatePredicate();
+        window.addEventListener("resize", this.updatePredicate);
+      }
+    
+      componentWillUnmount() {
+        window.removeEventListener("resize", this.updatePredicate);
+      }
+    
+      updatePredicate = () =>{
+        this.setState({ isDesktop: window.innerWidth > 1450 });
+      }
     getComponents(currentMode) {
         const components ={
             uploadComponent: <UploadFile history={this.props.history}/>,
@@ -20,19 +33,40 @@ class AdminDashboard extends Component {
         this.setState({currentMode: currentMode});
     }
     render(){
-        return (
-            <div>
+        const isDesktop = this.state.isDesktop;
+        if(isDesktop){
+            return (
+                <div className=" adminDashLarge">
+                    <h1>
+                    Admin Dashboard 
+                    </h1>
+                    <br/>
+                    <AdminSideNav toggleComponent={this.toggleComponent}/>
+                    <div>
+                        {this.getComponents(this.state.currentMode)}
+                    </div>
+                </div>
+            )
+        } else{
+            return(
+                <div className=" adminDashLarge">
                 <h1>
-                Admin Dashboard Page
+                Admin Dashboard 
                 </h1>
                 <br/>
-                <AdminSideNav toggleComponent={this.toggleComponent}/>
-                <div>
-                    {this.getComponents(this.state.currentMode)}
+                <div className="container">
+                    <div className="card">
+                         <UploadFile/>
+                    </div>
+                    <div className="card">
+                        <UserTable/>
+                    </div>
+                    
                 </div>
-
-            </div>
-        )
+                </div>
+            )
+        }
+        
     }
 }
 

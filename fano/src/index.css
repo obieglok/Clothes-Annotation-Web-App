@@ -54,6 +54,13 @@ footer {
   font-weight: 700;
   border-bottom: solid 1px #666;
 }
-#AdminSideNav button{
+#adminSideNav button{
   width : 5em;
+}
+.adminSideNav {
+  padding-left: 2em;
+}
+.card{
+  padding-top: 2em;
+  padding-bottom: 2em;
 }

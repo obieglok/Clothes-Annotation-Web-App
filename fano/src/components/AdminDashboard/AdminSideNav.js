@@ -12,8 +12,8 @@ class AdminSideNav extends Component {
     }
     render(){
         return (
-            <div className="left width=200px">
-            <table id="AdminSideNav" >
+            <div className="left adminSideNav">
+            <table id="adminSideNav" >
                 <tbody>
                 <tr><td><button onClick={this.handleClick} className="none " value="uploadComponent">Upload</button></td></tr>
                 <tr><td><button onClick={this.handleClick} className="none" value='userTableComponent'>Users</button></td></tr>
