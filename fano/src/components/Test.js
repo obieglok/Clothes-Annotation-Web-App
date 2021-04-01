@@ -41,7 +41,7 @@ export const Test = (props) => {
                     <label for="fname">Enter the visible color on the shirt.</label>
                     <input type="text" id="disp color" name="disp color"></input>
                     <button className="btn"
-                        onClick={() => props.exportAnnotations()}>
+                        onClick={() => props.commitAnnotations()}>
                     Submit annotations
                 </button>
                 </form>

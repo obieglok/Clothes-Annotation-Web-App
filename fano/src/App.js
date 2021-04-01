@@ -11,6 +11,8 @@ import Register from './components/Register';
 import Test from './components/Test';
 import UploadFile from './components/AdminDashboard/UploadFile';
 import AdminDashboard from './components/AdminDashboard/AdminDashboard';
+import annotate from './components/annotate';
+
 
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
           <Route exact path='/' component={Home} />
           <Route exact path='/uploadFile' component={UploadFile} />
           <Route exact path='/adminDash' component={AdminDashboard} />
+          <Route exact path='/annotate' component ={annotate} />
         </Switch>
       </div>
       </BrowserRouter>
@@ -39,7 +42,6 @@ function App() {
       <Footer />
     </footer>
     ]
-    
   );
 }
 
