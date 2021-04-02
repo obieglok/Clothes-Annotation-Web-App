@@ -65,7 +65,8 @@ export const imageReducer = (state = initState, action) => {
                 ...state,
                 fetchedImage: {
                     imageId: action.imageId,
-                    imageUrl: action.imageUrl
+                    imageUrl: action.imageUrl,
+                    imageName: action.imageName
                 },
                 fetchError: null
             }

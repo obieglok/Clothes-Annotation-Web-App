@@ -73,15 +73,21 @@ export const makeAdmin = (credentials) => {
   }
 }
 
-
-
-
-
-
-
-   
 // TODO removeAdmin
+export const removeAdmin = (credentials) => {
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+    const firebase = getFirebase()
+    firebase.auth().removeAdmin(
+        credentials.email,
+        credentials.password
+    ).then(() => {
+        dispatch({ type: "ADMIN REMOVED" })
+    }).catch((err) => {
+        dispatch({ type: "ADMIN NOT SUCCESSFULLY REMOVED", err })
+    })
 
+  }
+} 
 
 
 

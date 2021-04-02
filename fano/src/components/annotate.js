@@ -25,6 +25,7 @@ class annotate extends Component {
         e.preventDefault()
         let annotation = {
             imageId: this.props.fetchedImage.imageId,
+            imageName: this.props.fetchedImage.imageName,
             content: {
                 ...this.state
             }
