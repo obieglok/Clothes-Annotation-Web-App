@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import UploadFile from './UploadFile'
 import AdminSideNav from './AdminSideNav';
 import UserTable from './UserTable'
-
+import ExportAnnotations from './ExportAnnotation'
 class AdminDashboard extends Component { 
     
     state ={
@@ -25,7 +25,7 @@ class AdminDashboard extends Component {
         const components ={
             uploadComponent: <UploadFile history={this.props.history}/>,
             userTableComponent: <UserTable history={this.props.history}/>,
-            settingsComponent: null
+            exportComponent: <ExportAnnotations history={this.props.history}/>
         };
         return components[currentMode];
     }
@@ -61,7 +61,9 @@ class AdminDashboard extends Component {
                     <div className="card">
                         <UserTable/>
                     </div>
-                    
+                    <div className="card">
+                        <ExportAnnotations/>
+                    </div>
                 </div>
                 </div>
             )
