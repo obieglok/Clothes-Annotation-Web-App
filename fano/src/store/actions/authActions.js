@@ -57,7 +57,7 @@ export const signUp = (newUser) => {
 };
 
 
-// TODO makeAdmin function
+//makeAdmin function
 export const makeAdmin = (credentials) => {
   return (dispatch, getState, { getFirebase, getFirestore }) => {
       const firebase = getFirebase()
@@ -73,15 +73,22 @@ export const makeAdmin = (credentials) => {
   }
 }
 
+//removeAdmin
+export const removeAdmin = (credentials) => {
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+    const firebase = getFirebase()
 
+    const removeAdminFunc = firebase.functions().httpsCallable('removeAdmin')
+    removeAdminFunc(credentials).then((resp) => {
+        console.log(resp)
+    }).then(() => {
+        dispatch({ type: "ADMIN REMOVED" })
+    }).catch((err) => {
+        dispatch({ type: "ADMIN NOT SUCCESSFULLY REMOVED", err })
+    })
 
-
-
-
-
-   
-// TODO removeAdmin
-
+  }
+} 
 
 
 

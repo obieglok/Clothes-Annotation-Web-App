@@ -34,6 +34,38 @@ exports.addAdminRole = functions.https.onCall(async (data, context) => {
 });
 
 
+exports.removeAdmin = functions.https.onCall(async (data, context) =>{
+    // check request is made by an admin
+    if (context.auth.token.admin !== true) {
+        return {error: 'only admins can add other admins, sucker'}
+    }
+    try {
+        //get user
+        const user = await admin.auth().getUserByEmail(data.email)
+        
+        // set admin claims
+        await admin.auth().setCustomUserClaims(user.uid, {
+            admin: false
+        })
+
+        // update database
+        await admin.firestore().collection('users').doc(user.uid).update({ 
+            isAdmin: false,
+        })
+        
+        // return success
+        return {
+            message: `Success ${data.email} has been revoked admin privileges`
+        }
+    }
+    catch(err)  {
+        return err
+    }
+});
+
+
+
+
 // REF: see [https://leolabs.org/blog/firebase-cloud-functions-unzip-files]
 exports.unpackZip = functions
     .runWith({ timeoutSeconds: 300 })

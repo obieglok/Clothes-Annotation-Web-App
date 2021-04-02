@@ -17,7 +17,7 @@ class AdminSideNav extends Component {
                 <tbody>
                 <tr><td><button onClick={this.handleClick} className="none " value="uploadComponent">Upload</button></td></tr>
                 <tr><td><button onClick={this.handleClick} className="none" value='userTableComponent'>Users</button></td></tr>
-                <tr><td><button onClick={this.handleClick} className="none " value='settingsComponent'>Settings</button></td></tr>
+                <tr><td><button onClick={this.handleClick} className="none " value='exportComponent'>Export</button></td></tr>
                 </tbody>
             </table>
             </div>
