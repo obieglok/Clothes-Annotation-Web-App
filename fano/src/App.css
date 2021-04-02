@@ -1,141 +1,141 @@
-
-
-
 /* login box form */
 
-
-.frm1{
-  background-color: whitesmoke;
+.frm1 {
   margin: 10px;
   padding: 30px;
-  border-radius: 10px;
-  border: 1px solid rgb(197, 190, 190);
   /* position: ; */
 }
 
-.form-c{
- 
+.form-c {
   background-color: whitesmoke;
   /* background-color: slateblue; */
-  margin-bottom:2px ;
+  margin-bottom: 2px;
 }
-.form-row{
-  padding:0px 30px 0px 30px;
+.form-row {
+  padding: 0px 30px 0px 30px;
   color: black;
-  background-color: white;
+  background: rgba(216, 216, 216, 0.5);
   border-radius: 15px;
-  margin: 10px 0px 10px 0px ;
-  border: 1px solid #dadada;
+  margin: 20px 0px 20px 0px;
+}
+.lgn.details {
+  background: rgba( 93, 93, 93, 0.55 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
   
-}
-.lgn.details{
-  background-color: white;
+  
+
   /* background-color: thistle; */
-  margin-top: 70px;
-  padding: 15px 15px  10px 15px;
-  border: radius 15px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding: 15px 15px 10px 15px;
+  border-radius: 15px;
 }
-.lgn-inner{
-  background-color: white;
+.lgn-inner {
   /* background-color: #f02199; */
   display: flex;
   justify-content: center;
   /* position: absolute; */
 }
 
-.form-row.btn{
+.form-row.btn {
   margin-bottom: 30px;
 }
-.form-row input{
+.form-row input {
   border-bottom: 1px solid white !important;
   /* color: white !important; */
 }
-.form-row input:active{
+.form-row input:active {
   border-bottom: 1px solid white !important;
   /* color: white !important; */
-}  
+}
 
-.lgn-row-2{
+.lgn-row-2 {
   margin-top: 20px;
-  border-bottom: 1px solid #D7D7D7;
-  border-top: 1px solid #A1A1A1;
+  border-bottom: 1px solid #d7d7d7;
+  border-top: 1px solid #a1a1a1;
   line-height: 0;
   text-align: center;
 }
-.sid span{
+.sid span {
   font-size: medium;
-   background-color: whitesmoke;
-   padding: 1px 3px 1px 3px ;
+  background-color: whitesmoke;
+  padding: 1px 3px 1px 3px;
 }
-.lgn-row-2{
+.lgn-row-2 {
   background-color: whitesmoke;
   margin-bottom: 15px;
 }
 
-.blur{
+.blur {
   -webkit-filter: blur(4px);
--moz-filter: blur(4px);
--ms-filter: blur(4px);
--o-filter: blur(4px);
-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -ms-filter: blur(4px);
+  -o-filter: blur(4px);
+  filter: blur(4px);
 }
 /* .app-logos{
   background-color: #b30202;
   padding: 20px;
 } */
-.app-lg{
+.app-lg {
   margin-left: 25px;
-  padding:10px 20px 10px 10px;
-  border:1px solid black;
-  background-color:whitesmoke;
-  
+  padding: 10px 20px 10px 10px;
+  border: 1px solid black;
+  background-color: whitesmoke;
 }
-.app-lg.a{
+.app-lg.a {
   margin-right: 10px;
-  float:left;
+  float: left;
 }
-.app-lg.b{
- float:right;
+.app-lg.b {
+  float: right;
 }
 
-.regis{
+.regis {
   margin-top: 25px;
   padding: 10px;
   float: right;
 }
-.fano-text{
+.fano-text {
   display: none;
 }
-@media all and (max-width:500px ){
-  .fano-text{
-    display:contents !important;
+@media all and (max-width: 500px) {
+  .fano-text {
+    display: contents !important;
   }
-  .frm1{
-    background-color: whitesmoke;
+  .frm1 {
     margin: 10px;
-    padding: 30px;
+    padding: 10px;
     border: none;
     /* border-top: 10px; */
     /* position: ; */
   }
-  h1.fano-text{
-    font-weight: 800; 
+  h1.fano-text {
+    font-weight: 800;
     color: #61dafb;
   }
-  .lgn.details{
-    background-color: whitesmoke;
+  .lgn.details {
+    background: rgba( 93, 93, 93, 0.55 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-top: 1px solid rgb(163, 151, 151);
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    border-radius: 50px;
   }
-  .form-c{
+  .form-c {
     background-color: #61dafb;
   }
-  .lgn-inner{
-    background-color: whitesmoke;
+  .lgn-inner {
+    
   }
 }
-.annot-boxs{
+.annot-boxs {
   display: flex;
   justify-content: space-between;
   margin: 5% 250px 25px 250px;
@@ -143,26 +143,24 @@ filter: blur(4px);
   background-color: white;
   border-radius: 20px;
   box-shadow: 1px 1px 5px 4px #e4e4e4;
-  
 }
-.annot-img{
+.annot-img {
   margin-left: 10%;
-background-color: white;
-padding: 5px;
-float: left;
-
+  background-color: white;
+  padding: 5px;
+  float: left;
 }
-.annotation-row{
+.annotation-row {
   margin: 25px;
   padding: 25px;
-background-color: whitesmoke;
-float:right;
-border-radius: 20px;
+  background-color: whitesmoke;
+  float: right;
+  border-radius: 20px;
 }
-.annot-txt{
+.annot-txt {
   font-size: large;
   font-weight: 600;
-  color: black;  
+  color: black;
 }
 /* .annot-btn{
   
@@ -172,56 +170,78 @@ margin: 10px;
   border: #61dafb;
 } */
 
-.lgn-btn{
+.lgn-btn {
   background-color: white;
- padding: 5px;
- border-radius: 5px 5px;
- border-color: white;
- margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px 5px;
+  border-color: white;
+  margin-top: 10px;
 }
-.lgn-btn{
-background-color: white;
+.lgn-btn {
+  background-color: white;
 }
-.annot-c{
-background-color: white;
-padding: 10px;
-border-radius: 15px;
+.annot-c {
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
 }
-.annot_row input{
+.annot_row input {
   border-bottom: 1px solid white !important;
   /* color: white !important; */
 }
-.annot_row input:active{
+.annot_row input:active {
   border-bottom: 1px solid white !important;
   /* color: white !important; */
-}  
+}
 
-.card{
+.card {
   border-radius: 30px !important;
 }
 
-.userpage{
+.userpage {
   margin-top: 5rem;
 }
 
-.overview-card{
+.overview-card {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
 
-.cardSettings{
+.cardSettings {
   padding: 10%;
 }
 
-.skipButton{
+.skipButton {
   margin-top: 1rem;
 }
 
-.annoateButtons{
+.annoateButtons {
   border-radius: 50px;
   margin-top: 1rem;
 }
 
-.annotationPage{
+.annotationPage {
   margin-top: 5rem;
+}
+
+.body-sign-in-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("https://images.pexels.com/photos/1020370/pexels-photo-1020370.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-position: center; 
+  z-index: -10;
+}
+
+.redirect{
+  color: rgb(6, 89, 215);
+}
+
+.blockButton{
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  font-weight: 500;
+  
 }

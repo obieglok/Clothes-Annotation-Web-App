@@ -45,6 +45,7 @@ class UserTable extends Component {
               <th>Last Name</th>
               <th>Annotations</th>
               <th>Role</th>
+              <th> </th>
             </tr>
           </thead>
 
