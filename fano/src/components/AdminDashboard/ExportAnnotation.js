@@ -16,4 +16,16 @@ import { exportAnnotations } from '../../store/actions/imageActions'
         </div> 
     )
 }
-export default ExportAnnotations;
+const mapStateToProps = (state) => ({
+    annotationsJson: state.image.annotationsJson,
+    fetchedImage: state.image.fetchedImage
+})
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        exportAnnotations: () => {
+            dispatch(exportAnnotations())
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(ExportAnnotations);
