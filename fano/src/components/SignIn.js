@@ -50,33 +50,12 @@ handleSubmit = (e) => {
                                 </div>
                                 <div className='form-row-btn'>
                                     <div className='lgn-c'>
-                                        <button  className='lgn-btn'
-                                        > Login </button>
+                                        <button  className='btn waves-effect waves-light blue accent-4'> Login </button>
                                     </div>
                                 </div>
-                            <div className="lgn-row-2">
-                                <div className="sid">
-                                    <span>Or continue with</span>
-                                </div>
-                            </div>
+                           
                             <div className="lgn-row-logo">
-                                <div className="app-logos">
-                                    <a href='#'>
-                                        <div className="app-lg a">
-                                            <span>a</span>
-                                        </div>
-                                    </a>
-                                    <a href='#'>    
-                                        <div className="app-lg a">
-                                            <span>a</span>
-                                        </div>
-                                    </a>
-                                    <a href='#'>
-                                        <div className="app-lg a">
-                                            <span>a</span>
-                                        </div>
-                                    </a>
-                                </div>
+                               
                                 <div className="col s12 red-text center">
                                 {authError && <p>Login error. Please check your details</p> }
                                 </div>
