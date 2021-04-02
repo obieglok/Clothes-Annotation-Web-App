@@ -34,6 +34,23 @@ exports.addAdminRole = functions.https.onCall(async (data, context) => {
 });
 
 
+exports.removeAdmin = functions.https.Oncall((data, context) =>{
+    return admin.auth().getUserByEmail(data.email).then(user => {
+        return admin.auth().setCustomUserClaims(user.uid,{
+            admin: false
+        });
+    }).then(()=>{
+        return {
+            message: 'Success ${data.email} has been removed from admin'
+        }
+    }).catch(err => {
+        return err;
+    });
+});
+
+
+
+
 // REF: see [https://leolabs.org/blog/firebase-cloud-functions-unzip-files]
 exports.unpackZip = functions
     .runWith({ timeoutSeconds: 300 })
