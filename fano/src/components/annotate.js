@@ -14,24 +14,19 @@ class annotate extends Component {
     handleChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value
-        }, () => {
-            console.log(this.state)
         })
     }
 
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log("form submitted")
         let annotation = {
             imageId: this.props.fetchedImage.imageId,
             content: {
                 ...this.state
             }
         }
-
-        console.log(annotation)
         this.props.commitAnnotation(annotation)
-        e.target.resetForm()
+        //e.target.resetForm()
     }
 
     render() {
