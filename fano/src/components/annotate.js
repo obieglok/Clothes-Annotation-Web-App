@@ -1,99 +1,114 @@
 import React, { Component } from "react";
 
-import { connect } from 'react-redux'
-import { commitAnnotation, fetchNextImage } from '../store/actions/imageActions'
-
+import { connect } from "react-redux";
+import {
+  commitAnnotation,
+  fetchNextImage,
+} from "../store/actions/imageActions";
 
 class annotate extends Component {
+  state = {
+    annotationText: "",
+    colorCount: 1,
+  };
 
-    state = {
-        annotationText: "",
-        colorCount: 1
-    }
+  componentDidMount() {
+    this.props.fetchNextImage();
+  }
 
-    componentDidMount() {
-        this.props.fetchNextImage()
-    }
+  handleChange = (e) => {
+    this.setState({
+      [e.target.id]: e.target.value,
+    });
+  };
 
-    handleChange = (e) => {
-        this.setState({
-            [e.target.id]: e.target.value
-        })
-    }
+  handleSubmit = (e) => {
+    e.preventDefault();
+    let annotation = {
+      imageId: this.props.fetchedImage.imageId,
+      imageName: this.props.fetchedImage.imageName,
+      content: {
+        ...this.state,
+      },
+    };
+    this.props.commitAnnotation(annotation);
+    e.target.reset();
+  };
 
-    handleSubmit = (e) => {
-        e.preventDefault()
-        let annotation = {
-            imageId: this.props.fetchedImage.imageId,
-            imageName: this.props.fetchedImage.imageName,
-            content: {
-                ...this.state
-            }
-        }
-        this.props.commitAnnotation(annotation)
-        e.target.reset()
-    }
-
-    render() {
-        return (
+  render() {
+    return (
+      <div className="container annotationPage">
+        <div className="row">
+          <div className="col s12 l7">
             <div>
-
-                <div className="annot-boxs">
-                    <div className="row">
-                        <div className="col s12 l7">
-                            <div >
-                                <img className="responsive-img" src={this.props.fetchedImage && this.props.fetchedImage.imageUrl} alt="" />
-                            </div>
-                        </div>
-                        <div className="col s12 l5">
-                            <div className="annotation-row">
-                                <form className=""
-                                    onSubmit={this.handleSubmit}>
-                                    <label className="annot-txt" htmlFor="annotationText">Enter the visible text.</label>
-                                    <input className='annot-c'
-                                        type="text"
-                                        id="annotationText"
-                                        name="annotationText"
-                                        onChange={this.handleChange} />
-                                    <label className="annot-txt" htmlFor="colorCount">Enter the visible color on the shirt.</label>
-                                    <input className='annot-c'
-                                        type="text"
-                                        id="colorCount"
-                                        name="colorCount"
-                                        onChange={this.handleChange} />
-                                    <button type="submit"
-                                        className="lgn-btn">
-                                        Submit annotations
-                                    </button>
-                                </form>
-                                <button className="lgn-btn"
-                                    onClick={() => this.props.fetchNextImage()}>
-                                    Fetch next image
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
+              <img
+                className="responsive-img"
+                src={
+                  this.props.fetchedImage && this.props.fetchedImage.imageUrl
+                }
+                alt=""
+              />
             </div>
-        )
-    }
-
+          </div>
+          <div className="col s12 l5">
+            <div className="annotation-row">
+              <form className="" onSubmit={this.handleSubmit}>
+                <div>
+                  <label className="annot-txt" htmlFor="annotationText">
+                    Enter the visible text.
+                  </label>
+                  <input
+                    className="annot-c"
+                    type="text"
+                    id="annotationText"
+                    name="annotationText"
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div></div>
+                <label className="annot-txt" htmlFor="colorCount">
+                  Enter the visible color on the shirt.
+                </label>
+                <input
+                  className="annot-c"
+                  type="text"
+                  id="colorCount"
+                  name="colorCount"
+                  onChange={this.handleChange}
+                />
+                <button
+                  type="submit"
+                  className="btn waves-effect waves-light blue accent-4 annoateButtons"
+                >
+                  Submit annotations
+                </button>
+              </form>
+              <button
+                className="btn waves-effect waves-light teal accent-4 skipButton annoateButtons"
+                onClick={() => this.props.fetchNextImage()}
+              >
+                Fetch next image
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 const mapStateToProps = (state) => ({
-    annotationsJson: state.image.annotationsJson,
-    fetchedImage: state.image.fetchedImage
-})
+  annotationsJson: state.image.annotationsJson,
+  fetchedImage: state.image.fetchedImage,
+});
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-        commitAnnotation: (annotation) => {
-            dispatch(commitAnnotation(annotation))
-        },
-        fetchNextImage: () => dispatch(fetchNextImage()),
-    }
-}
+  return {
+    commitAnnotation: (annotation) => {
+      dispatch(commitAnnotation(annotation));
+    },
+    fetchNextImage: () => dispatch(fetchNextImage()),
+  };
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(annotate)
+export default connect(mapStateToProps, mapDispatchToProps)(annotate);
