@@ -4,7 +4,7 @@ import { uploadImages } from "../../store/actions/imageActions";
 import { Redirect, withRouter } from "react-router-dom";
 import { compose } from "redux";
 import { firestoreConnect } from "react-redux-firebase";
-import { makeAdmin } from "../../store/actions/authActions";
+import { makeAdmin, removeAdmin } from "../../store/actions/authActions";
 
 class UserTable extends Component {
   state = {
@@ -16,12 +16,19 @@ class UserTable extends Component {
     this.props.makeAdmin(user)
   }
 
+  removeAdmin = (user) => {
+    console.log(user.email)
+    this.props.removeAdmin(user)
+  }
+
   render() {
     const { auth } = this.props;
     const {users} = this.props;
     const usersList = users && users.map(user => {
       return (
-        <UserRow user={user} handleMakeAdmin={this.makeAdmin}/>
+        <UserRow user={user} 
+                handleMakeAdmin={this.makeAdmin}
+                handleRemoveAdmin={this.removeAdmin}/>
       )
     })
     if (!auth.uid) {
@@ -57,7 +64,8 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    makeAdmin: (user) => dispatch(makeAdmin(user))
+    makeAdmin: (user) => dispatch(makeAdmin(user)),
+    removeAdmin: (user) => dispatch(removeAdmin(user))
   }
 }
 
@@ -101,7 +109,8 @@ const UserRow = (props) => {
                 </button>
               ) :
               (
-                <button className="btn btn-small red">
+                <button className="btn btn-small red"
+                        onClick={() => props.handleRemoveAdmin(user)}>
                   Remove Admin
                 </button>
               )
