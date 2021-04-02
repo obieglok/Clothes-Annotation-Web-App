@@ -26,7 +26,6 @@ class SignIn extends react.Component {
       return <Redirect to="/" />;
     }
     return (
-<<<<<<< Updated upstream
       <div className="body-sign-in-register">
 
       <container className="main-c">
@@ -80,77 +79,6 @@ class SignIn extends react.Component {
           </div>
         </div>
       </container>
-=======
-      <div className="body">
-        <container className="main-c">
-          
-            <div className="lgn-inner ">
-              <form className="frm1" onSubmit={this.handleSubmit}>
-                <div className="form-row">
-                  <input
-                    type="email"
-                    className="form-c"
-                    name="email"
-                    id="email"
-                    placeholder="email"
-                    required
-                    onChange={this.handleChange}
-                  />
-                </div>
-                <div className="form-row">
-                  <input
-                    type="password"
-                    className="form-c"
-                    name="password"
-                    id="password"
-                    placeholder="password"
-                    required
-                    onChange={this.handleChange}
-                  />
-                </div>
-                <div className="form-row-btn">
-                  <div className="lgn-c">
-                    <button className="lgn-btn"> Login </button>
-                  </div>
-                </div>
-                <div className="lgn-row-2">
-                  <div className="sid">
-                    <span>Or continue with</span>
-                  </div>
-                </div>
-                <div className="lgn-row-logo">
-                  <div className="app-logos">
-                    <a href="#">
-                      <div className="app-lg a">
-                        <span>a</span>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div className="app-lg a">
-                        <span>a</span>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div className="app-lg a">
-                        <span>a</span>
-                      </div>
-                    </a>
-                  </div>
-                  <div className="col s12 red-text center">
-                    {authError && <p>Login error. Please check your details</p>}
-                  </div>
-                  <div className="regis">
-                    <span>Don't have an account? </span>
-                    <a href="/register">
-                      <span>sign up here.</span>
-                    </a>
-                  </div>
-                </div>
-              </form>
-            
-          </div>
-        </container>
->>>>>>> Stashed changes
       </div>
     );
   }
