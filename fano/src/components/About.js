@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 
 const About = (props) => {
-  const { auth } = props;
-  if (!auth.uid) {
-    return <Redirect to="/" />;
-  }
+  // const { auth } = props;
+  // if (!auth.uid) {
+  //   return <Redirect to="/" />;
+  // }
   return (
     <div className="container">
       <h1 className="header">About Us</h1>

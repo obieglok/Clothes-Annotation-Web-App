@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 
 const Contact = (props) => {
-  const { auth } = props;
-  if (!auth.uid) {
-    return <Redirect to="/" />;
-  }
+  // const { auth } = props;
+  // if (!auth.uid) {
+  //   return <Redirect to="/" />;
+  // }
   return (
     <div className="container">
       <h1 className="header">Contact Us</h1>
