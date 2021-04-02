@@ -19,7 +19,7 @@ export const fetchNextImage = () => {
                 const imageUrl = await firebase.storage().ref()
                     .child("images").child(imageName)
                     .getDownloadURL()
-                dispatch({ type: "IMAGE_FETCH_SUCCESSFUL", imageUrl, imageId: id })
+                dispatch({ type: "IMAGE_FETCH_SUCCESSFUL", imageUrl, imageId: id, imageName })
             } else {
                 console.log("not here")
             }
@@ -47,11 +47,12 @@ export const commitAnnotation = (annotation) => {
         const firebase = getFirebase()
         const state = getState()
         const userId = state.firebase.auth.uid
-        const { imageId, content } = annotation
+        const { imageId, content, imageName } = annotation
         try {
             // create new annotation doc
             await firestore.collection("images").doc(imageId)
                 .collection("annotations").add({
+                    imageName,
                     imageId,
                     worker: userId,
                     createdAt: firebase.firestore.FieldValue.serverTimestamp(),
