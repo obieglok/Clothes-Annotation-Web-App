@@ -11,6 +11,10 @@ class annotate extends Component {
         colorCount: 1
     }
 
+    componentDidMount() {
+        this.props.fetchNextImage()
+    }
+
     handleChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value
