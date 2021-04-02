@@ -69,7 +69,7 @@ export const commitAnnotation = (annotation) => {
         } catch (err) {
             dispatch({ type: "ANNOTATION_COMMIT_ERROR", err })
         }
-        fetchNextImage()
+        dispatch(fetchNextImage())
     }
 }
 
