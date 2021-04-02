@@ -67,7 +67,7 @@ class annotate extends Component {
                 </div>
                 <div></div>
                 <label className="annot-txt" htmlFor="colorCount">
-                  Enter the visible color on the shirt.
+                  Enter the number of colors on the shirt.
                 </label>
                 <input
                   className="annot-c"
