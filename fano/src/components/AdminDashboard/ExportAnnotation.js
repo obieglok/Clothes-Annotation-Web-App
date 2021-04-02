@@ -13,6 +13,14 @@ import { exportAnnotations } from '../../store/actions/imageActions'
            }} >
            export annotation
          </button>
+         {props.annotationsJson && <a
+                    className="btn"
+                    style={{ margin: 10 }}
+                    href={URL.createObjectURL(props.annotationsJson)}
+                    download="data.json"
+                >
+                    DOWNLOAD DATA AS JSON
+            </a>}
         </div> 
     )
 }
