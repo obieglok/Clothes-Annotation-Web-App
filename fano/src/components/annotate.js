@@ -1,43 +1,85 @@
-import react from 'react';
+import React, { Component } from "react";
 
-import {connect} from 'react-redux'
-//import {annotate} from '../store/actions/authActions'
-import { exportAnnotations, fetchNextImage } from '../store/actions/imageActions'
+import { connect } from 'react-redux'
+import { commitAnnotation, fetchNextImage } from '../store/actions/imageActions'
 
 
-export const annotate = (props) => {
+class annotate extends Component {
+
+    state = {
+        annotationText: "",
+        colorCount: 1
+    }
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.id]: e.target.value
+        }, () => {
+            console.log(this.state)
+        })
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault()
+        console.log("form submitted")
+        let annotation = {
+            imageId: this.props.fetchedImage.imageId,
+            content: {
+                ...this.state
+            }
+        }
+
+        console.log(annotation)
+        this.props.commitAnnotation(annotation)
+        e.target.resetForm()
+    }
+
+    render() {
         return (
             <div>
-               
+
                 <div className="annot-boxs">
+                    <div className="row">
+                        <div className="col s12 l7">
+                            <div >
+                                <img className="responsive-img" src={this.props.fetchedImage && this.props.fetchedImage.imageUrl} alt="" />
+                            </div>
+                        </div>
+                        <div className="col s12 l5">
+                            <div className="annotation-row">
+                                <form className=""
+                                    onSubmit={this.handleSubmit}>
+                                    <label className="annot-txt" htmlFor="annotationText">Enter the visible text.</label>
+                                    <input className='annot-c'
+                                        type="text"
+                                        id="annotationText"
+                                        name="annotationText"
+                                        onChange={this.handleChange} />
+                                    <label className="annot-txt" htmlFor="colorCount">Enter the visible color on the shirt.</label>
+                                    <input className='annot-c'
+                                        type="text"
+                                        id="colorCount"
+                                        name="colorCount"
+                                        onChange={this.handleChange} />
+                                    <button type="submit"
+                                        className="lgn-btn">
+                                        Submit annotations
+                                    </button>
+                                </form>
+                                <button className="lgn-btn"
+                                    onClick={() => this.props.fetchNextImage()}>
+                                    Fetch next image
+                                </button>
+                            </div>
+                        </div>
 
-                    <div className="annot-img">
-                        <img src={props.fetchedImage && props.fetchedImage.imageUrl} alt=""/>
-                    </div>
-
-                    <div className="annotation-row">
-                        <form className= "annot_row">
-                            <label className="annot-txt" htmlFor="text">Enter the visible text.</label>
-                            <input className='annot-c' type="text" id="disp text" name="disp text"></input>
-                            <label className="annot-txt" htmlFor="text">Enter the visible color on the shirt.</label>
-                            <input className='annot-c' type="text" id="disp color" name="disp color"></input>
-                            <button className="lgn-btn"
-                                onClick={() => props.commitAnnotation()}>
-                            Submit annotations
-                        </button>
-                        </form>
-                        <button className="lgn-btn"
-                                onClick={() => props.fetchNextImage()}>
-                            Fetch next image
-                        </button>
                     </div>
                 </div>
-                         
-            </div>
-            
 
+            </div>
         )
-    
+    }
+
 }
 
 const mapStateToProps = (state) => ({
@@ -47,11 +89,10 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        exportAnnotations: () => {
-            dispatch(exportAnnotations())
+        commitAnnotation: (annotation) => {
+            dispatch(commitAnnotation(annotation))
         },
         fetchNextImage: () => dispatch(fetchNextImage()),
-        //makeAdmin: (cred) => dispatch(makeAdmin(cred))
     }
 }
 

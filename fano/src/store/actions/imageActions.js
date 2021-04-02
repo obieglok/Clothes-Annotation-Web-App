@@ -65,6 +65,7 @@ export const commitAnnotation = (annotation) => {
                 annotationsCounter: firebase.firestore.FieldValue.increment(1)
             })
             dispatch({ type: "ANNOTATION_COMMIT_SUCCESSFUL" })
+            fetchNextImage()
         } catch (err) {
             dispatch({ type: "ANNOTATION_COMMIT_ERROR", err })
         }
