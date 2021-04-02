@@ -212,3 +212,16 @@ border-radius: 15px;
 .cardSettings{
   padding: 10%;
 }
+
+.skipButton{
+  margin-top: 1rem;
+}
+
+.annoateButtons{
+  border-radius: 50px;
+  margin-top: 1rem;
+}
+
+.annotationPage{
+  margin-top: 5rem;
+}
