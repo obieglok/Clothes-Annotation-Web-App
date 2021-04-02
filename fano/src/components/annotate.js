@@ -26,7 +26,7 @@ class annotate extends Component {
             }
         }
         this.props.commitAnnotation(annotation)
-        //e.target.resetForm()
+        e.target.reset()
     }
 
     render() {
