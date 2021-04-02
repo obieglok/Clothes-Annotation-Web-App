@@ -6,28 +6,27 @@ import { exportAnnotations, fetchNextImage } from '../store/actions/imageActions
 
 
 export const annotate = (props) => {
-    
         return (
             <div>
                
-                <div class="annot-boxs">
+                <div className="annot-boxs">
 
-                    <div class="annot-img">
+                    <div className="annot-img">
                         <img src={props.fetchedImage && props.fetchedImage.imageUrl} alt=""/>
                     </div>
 
-                    <div class="annotation-row">
-                        <form class= "annot_row">
-                            <label class="annot-txt" for="text">Enter the visible text.</label>
-                            <input class='annot-c' type="text" id="disp text" name="disp text"></input>
-                            <label class="annot-txt" for="text">Enter the visible color on the shirt.</label>
-                            <input class='annot-c' type="text" id="disp color" name="disp color"></input>
-                            <button class="lgn-btn"
-                                onClick={() => props.commitAnnotations()}>
+                    <div className="annotation-row">
+                        <form className= "annot_row">
+                            <label className="annot-txt" htmlFor="text">Enter the visible text.</label>
+                            <input className='annot-c' type="text" id="disp text" name="disp text"></input>
+                            <label className="annot-txt" htmlFor="text">Enter the visible color on the shirt.</label>
+                            <input className='annot-c' type="text" id="disp color" name="disp color"></input>
+                            <button className="lgn-btn"
+                                onClick={() => props.commitAnnotation()}>
                             Submit annotations
                         </button>
                         </form>
-                        <button class="lgn-btn"
+                        <button className="lgn-btn"
                                 onClick={() => props.fetchNextImage()}>
                             Fetch next image
                         </button>
