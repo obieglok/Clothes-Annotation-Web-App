@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
@@ -23,7 +21,7 @@ main {
 #brand{
   color: white;
   font-size: 50px;
-  font-family:'Roboto', sans-serif;
+  font-family:'Poppins', sans-serif;
   font-weight: 700;
   text-shadow: 1.5px 1.5px 1.5px rgb(59, 59, 59);
   padding-left: 0.1em;
@@ -40,11 +38,7 @@ nav ul li{
   position: relative;
   min-height: 100vh;
 }
-.about .header{
-  font-family:'Taviraj', serif;
-  font-weight: 700;
-  border-bottom: solid 1px #666;
-}
+
 .about div {
   border-bottom-style: groove;
 }
@@ -52,16 +46,7 @@ nav ul li{
   padding-bottom: 3em;
   
 }
-.about h5{
-  font-family:'Taviraj', serif;
-  font-weight: 300;
-}
 
-.contact .header{
-  font-family:'Taviraj', serif;
-  font-weight: 700;
-  border-bottom: solid 1px #666;
-}
 #adminSideNav button{
   width : 5em;
 }

@@ -104,13 +104,13 @@ const UserRow = (props) => {
           {
             !user.isAdmin ? 
               (
-                <button className="btn btn-small"
+                <button className="btn btn-small tableButtons"
                         onClick={() => props.handleMakeAdmin(user)}>
                   Make Admin
                 </button>
               ) :
               (
-                <button className="btn btn-small red"
+                <button className="btn btn-small red tableButtons" 
                         onClick={() => props.handleRemoveAdmin(user)}>
                   Remove Admin
                 </button>

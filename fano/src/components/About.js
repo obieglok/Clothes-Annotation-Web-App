@@ -2,9 +2,9 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="container">
-      <h1 className="header">About Us</h1>
-      <div class="row">
+    <div className="container userpage marginFromFooter">
+      <h5 class="center-align">A few things about Fano...</h5>
+      <div class="row cardsAboutContact">
         <div class="col s12 m6">
           <div className="card cardSettings">
             <h5>What is Fano?</h5>

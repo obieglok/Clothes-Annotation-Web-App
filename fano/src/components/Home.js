@@ -9,8 +9,8 @@ const Home = (props) => {
         return <Redirect to='/signIn' />
     }
     return (
-        <div>
-            <UserProfile/>
+        <div className="container marginFromFooter">
+            <UserProfile />
         </div>
     )
 }

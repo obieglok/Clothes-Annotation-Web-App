@@ -40,7 +40,7 @@ const UserProfile = (props) => {
         </div>
       </div>
       <Link to="/annotate">
-        <a class="waves-effect waves-light btn-large">
+        <a class="waves-effect waves-light btn-large annoateButtons">
           <i class="material-icons right">arrow_forward</i>Annotate
         </a>
       </Link>
