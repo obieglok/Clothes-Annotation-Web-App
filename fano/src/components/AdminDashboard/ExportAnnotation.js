@@ -6,7 +6,7 @@ import { exportAnnotations } from '../../store/actions/imageActions'
     return(
         <div className="container">
         <p> CLick Below to Export All the Annotations</p>
-        <button className="btn"
+        <button className="btn annoateButtons"
            onClick={() => {
                console.log("clicked")
                props.exportAnnotations()
@@ -14,7 +14,7 @@ import { exportAnnotations } from '../../store/actions/imageActions'
            export annotation
          </button>
          {props.annotationsJson && <a
-                    className="btn"
+                    className="btn annoateButtons"
                     style={{ margin: 10 }}
                     href={URL.createObjectURL(props.annotationsJson)}
                     download="data.json"

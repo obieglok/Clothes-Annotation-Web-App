@@ -2,9 +2,9 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="container">
-      <h1 className="header">Contact Us</h1>
-      <div className="row">
+    <div className="container userpage marginFromFooter">
+      <h5 class="center-align">Reach us</h5>
+      <div className="row cardsAboutContact">
         <div className="col s12 m6">
           <div className="card cardSettings">
             <thead>
