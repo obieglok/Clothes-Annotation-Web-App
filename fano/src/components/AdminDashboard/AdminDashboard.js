@@ -3,6 +3,8 @@ import UploadFile from "./UploadFile";
 import AdminSideNav from "./AdminSideNav";
 import UserTable from "./UserTable";
 import ExportAnnotations from "./ExportAnnotation";
+import {connect} from 'react-redux'
+import { Redirect } from 'react-router-dom'
 class AdminDashboard extends Component {
   state = {
     currentMode: "uploadComponent",
@@ -32,6 +34,9 @@ class AdminDashboard extends Component {
     this.setState({ currentMode: currentMode });
   };
   render() {
+    
+    const {profile } = this.props
+    if(!profile.isAdmin) return <Redirect to='/'/>
     const isDesktop = this.state.isDesktop;
     if (isDesktop) {
       return (
@@ -62,5 +67,9 @@ class AdminDashboard extends Component {
     }
   }
 }
-
-export default AdminDashboard;
+const mapStateToProps = (state) => {
+  return{
+      profile: state.firebase.profile
+  }
+}
+export default connect(mapStateToProps)(AdminDashboard);
