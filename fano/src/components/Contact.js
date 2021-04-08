@@ -2,51 +2,24 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="container userpage marginFromFooter">
-      <h5 class="center-align">Reach us</h5>
+    <div className="container userpage marginFromFooter center">
+      <h5 class="center-align">Contact Details Below</h5>
       <div className="row cardsAboutContact">
-        <div className="col s12 m6">
+        <div >
           <div className="card cardSettings">
             <thead>
               <tr>
-                <th> Contact ADAPT Centre</th>
+                <th> Supervisor</th>
               </tr>
             </thead>
 
             <table className="centered">
               <tr>
                 <td>
-                  <i className="material-icons centre">phone</i>
+                  <i className="material-icons centre">person</i>
                 </td>
                 <td>
-                  <span className="right">+353 1 896 1797</span> <br></br>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <i className="material-icons centre">email</i>
-                </td>
-                <td>
-                  <span className="right"> info@adaptcentre.ie</span>{" "}
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div className="col s12 m6">
-          <div className="card cardSettings">
-            <thead>
-              <tr>
-                <th> Contact Trinity College</th>
-              </tr>
-            </thead>
-            <table className="centered">
-              <tr>
-                <td>
-                  <i className="material-icons centre">phone</i>
-                </td>
-                <td>
-                  <span className="right">+353 1 896 1000</span> <br></br>
+                  <span className="right">Mohammed Al-Rawi</span> <br></br>
                 </td>
               </tr>
               <tr>
@@ -54,7 +27,7 @@ const Contact = () => {
                   <i className="material-icons centre">email</i>
                 </td>
                 <td>
-                  <span className="right"> info@trinity.com</span>{" "}
+                  <span className="right"> al-rawim@tcd.ie</span>{" "}
                 </td>
               </tr>
             </table>
