@@ -36,7 +36,7 @@ function App() {
       </div>
       </BrowserRouter>
       </main >,
-    <footer className="page-footer blue lighten-3">
+    <footer className="page-footer grey darken-4">
       <Footer />
     </footer>
     ]

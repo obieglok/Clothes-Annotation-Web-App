@@ -80,14 +80,14 @@ class annotate extends Component {
                   type="submit"
                   className="btn waves-effect waves-light blue accent-4 annoateButtons"
                 >
-                  Submit annotations
+                  Submit
                 </button>
               </form>
               <button
                 className="btn waves-effect waves-light teal accent-4 skipButton annoateButtons"
                 onClick={() => this.props.fetchNextImage()}
               >
-                Fetch next image
+                Skip
               </button>
             </div>
           </div>

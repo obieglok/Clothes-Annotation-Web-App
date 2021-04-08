@@ -29,90 +29,91 @@ class Register extends react.Component {
       return <Redirect to="/" />;
     }
     return (
-        <div className="body-sign-in-register">
-            
-      <container>
-        
-        <div class="lgn details register">
-          <div class="lgn-inner ">
-            <form class="frm1" onSubmit={this.handleSubmit}>
-              <div class="form-row">
-                <input
-                  type="text"
-                  class="form-c"
-                  name="firstName"
-                  id="firstName"
-                  placeholder="First Name"
-                  required
-                  onChange={this.handleChange}
-                />
-              </div>
-              <div class="form-row">
-                <input
-                  type="text"
-                  class="form-c"
-                  name="lastName"
-                  id="lastName"
-                  placeholder="Last Name"
-                  required
-                  onChange={this.handleChange}
-                />
-              </div>
-              <div class="form-row">
-                <input
-                  type="email"
-                  class="form-c"
-                  name="email"
-                  id="email"
-                  placeholder="Email"
-                  required
-                  onChange={this.handleChange}
-                />
-              </div>
-              <div class="form-row">
-                <input
-                  type="password"
-                  class="form-c"
-                  name="password"
-                  id="password"
-                  placeholder="Password"
-                  required
-                  onChange={this.handleChange}
-                />
-              </div>
-              <div class="form-row">
-                <input
-                  type="password"
-                  class="form-c"
-                  name="password"
-                  placeholder="Re-enter password"
-                  required
-                  onChange={this.handleChange}
-                />
-              </div>
-
-              <div class="form-row-btn">
-                <div class="lgn-c">
-                  <button submit={this.handleSubmit} className="btn waves-effect waves-light blue accent-4 blockButton">
-                    {" "}
-                    Register
-                  </button>
+      <div className="body-sign-in-register">
+        <container className="register">
+          <div class="lgn details">
+            <div class="lgn-inner">
+              <form class="frm1" onSubmit={this.handleSubmit}>
+                <div class="form-row">
+                  <input
+                    type="text"
+                    class="form-c"
+                    name="firstName"
+                    id="firstName"
+                    placeholder="First Name"
+                    required
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div class="form-row">
+                  <input
+                    type="text"
+                    class="form-c"
+                    name="lastName"
+                    id="lastName"
+                    placeholder="Last Name"
+                    required
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div class="form-row">
+                  <input
+                    type="email"
+                    class="form-c"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div class="form-row">
+                  <input
+                    type="password"
+                    class="form-c"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div class="form-row">
+                  <input
+                    type="password"
+                    class="form-c"
+                    name="password"
+                    placeholder="Re-enter password"
+                    required
+                    onChange={this.handleChange}
+                  />
                 </div>
 
-                <div className="col s12 red-text center">
-                  {authError && <p>Login error. Please check your details</p>}
+                <div class="form-row-btn">
+                  <div class="lgn-c">
+                    <button
+                      submit={this.handleSubmit}
+                      className="btn waves-effect waves-light blue accent-4 blockButton"
+                    >
+                      {" "}
+                      Register
+                    </button>
+                  </div>
+
+                  <div className="col s12 red-text center">
+                    {authError && <p>Login error. Please check your details</p>}
+                  </div>
+                  <div className="regis">
+                    <span>Already have an account? </span>
+                    <a href="/signIn">
+                      <span className="redirect">log in here.</span>
+                    </a>
+                  </div>
                 </div>
-                <div className="regis">
-                  <span>Already have an account? </span>
-                  <a href="/signIn">
-                    <span className="redirect">log in here.</span>
-                  </a>
-                </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
-        </div>
-      </container>
+        </container>
       </div>
     );
   }

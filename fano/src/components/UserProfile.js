@@ -12,7 +12,7 @@ const UserProfile = (props) => {
       <div className="overview-card">
         <div class="row">
           <div class="col s12 m6">
-            <div class="card teal lighten-2 hoverable">
+            <div class="card blue darken-2 hoverable">
               <div class="card-content white-text">
                 <span class="card-title">Overview</span>
                 <h6 class="left-align">
@@ -25,7 +25,7 @@ const UserProfile = (props) => {
             </div>
           </div>
           <div class="col s12 m6">
-            <div class="card pink lighten-2 hoverable">
+            <div class="card blue darken-3 hoverable">
               <div class="card-content white-text">
                 <span class="card-title">Performance this week</span>
                 <h6 class="left-align">
@@ -40,9 +40,9 @@ const UserProfile = (props) => {
         </div>
       </div>
       <Link to="/annotate">
-        <a class="waves-effect waves-light btn-large annoateButtons">
+      <button href="#" className="btn waves-effect waves-light orange accent-3 annoateButtons">
           <i class="material-icons right">arrow_forward</i>Annotate
-        </a>
+        </button>
       </Link>
     </div>
   );

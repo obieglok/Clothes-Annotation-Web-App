@@ -4,15 +4,17 @@ import { Link } from 'react-router-dom';
 import SignedInLinks from './SignedInLinks';
 import SignedOutLinks from './SignedOutLinks';
 import {connect} from 'react-redux'
+import LogoImage from '../resources/Fano_logo.png'
 class Navbar extends Component {
     render(){
         const {auth} = this.props;
         const links = auth.uid ? <SignedInLinks /> : <SignedOutLinks/>
             return (
                 <div>
-                    <nav  className="blue lighten-3">
-                        <div className="nav-wrapper">
-                            <a href="/" className=" left " id="brand">Fano</a>
+                    <nav  className="navbarblur">
+                        <div className="nav-wrapper" >
+                            <a href="/"  id="brand"><img src={LogoImage} width="120" height="auto">
+                            </img></a>
                             <a href="#" data-target="mobile-demo" className=" sidenav-trigger right"><i className=" material-icons">menu</i></a>
                             <ul className="right hide-on-med-and-down">
                                 {links}
