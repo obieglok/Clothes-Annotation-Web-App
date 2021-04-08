@@ -287,3 +287,8 @@ nav ul a {
 .waves-effect.waves-blue .waves-ripple {
   background-color: #64b5f6;
  }
+
+ .iconBG{
+   color: black;
+   font-size: 30px !important;
+ }

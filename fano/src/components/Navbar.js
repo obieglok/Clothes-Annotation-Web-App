@@ -15,7 +15,7 @@ class Navbar extends Component {
                         <div className="nav-wrapper" >
                             <a href="/"  id="brand"><img src={LogoImage} width="120" height="auto">
                             </img></a>
-                            <a href="#" data-target="mobile-demo" className=" sidenav-trigger right"><i className=" material-icons">menu</i></a>
+                            <a href="#" data-target="mobile-demo" className=" sidenav-trigger right"><i className=" material-icons iconBG">menu</i></a>
                             <ul className="right hide-on-med-and-down">
                                 {links}
                             </ul>
