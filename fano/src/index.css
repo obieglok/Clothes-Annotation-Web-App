@@ -19,17 +19,17 @@ main {
 
 
 #brand{
-  color: white;
-  font-size: 50px;
   font-family:'Poppins', sans-serif;
   font-weight: 700;
   text-shadow: 1.5px 1.5px 1.5px rgb(59, 59, 59);
-  padding-left: 0.1em;
+  padding-left: 1rem;
+  padding-top: 0.6rem;
+  position:absolute;
+  left:0;
+  top:0;
 }
 
-nav ul li{
-  text-shadow: 2px 2px 2px rgb(59, 59, 59);
-}
+
 #mobile-demo{
   max-width:150px;
 }

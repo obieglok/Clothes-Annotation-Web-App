@@ -37,10 +37,10 @@ class UploadFile extends Component {
       return <Redirect to="/" />;
     }
     return (
-      <div className="container row s12 m6">
+      <div className="container s12 m6">
         <form onSubmit={this.handleSubmit}>
           <h5 className="grey-text text-darken-3">Upload Files</h5>
-          
+          <div class="row">
             <div className="input-field annotationPage">
               <input
                 type="file"
@@ -48,9 +48,13 @@ class UploadFile extends Component {
                 id="file"
                 onChange={this.handleChange}
               />
-              <button className="btn blue lighten-1 z-depth-0 annoateButtons">
+              </div>
+              <div class="row">
+              <button className="btn waves-effect waves-light blue accent-4 annoateButtons">
                 Upload
               </button>
+              </div>
+              
             </div>
           
         </form>
