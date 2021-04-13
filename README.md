@@ -1,7 +1,11 @@
 
 # Fano - Clothes Annotation Web App
 
-SWENG 2021 Group 2 Project to create a web app that can be used to annotate images of clothes that have text printed on them. 
+SWENG 2021 Group 2 - Project to create a web application that can be used to annotate images of clothes that have text printed on them. 
+The application allows an admin to upload images of clothes with text to the database, that later can be annotated by Fano users.
+The users will be asked to carefully read the text on the t-shirt and count the number of colours visible on the shirt, before entering them into the corresponding fields. 
+The admin will be able to export all the annotations to a json format. 
+
 
 # Getting Started with Fano
 
