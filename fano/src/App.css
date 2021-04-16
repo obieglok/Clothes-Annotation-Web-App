@@ -97,7 +97,7 @@
 .regis {
   margin-top: 25px;
   padding: 10px;
-  float: right;
+  /* float: center; */
 }
 .fano-text {
   display: none;
@@ -194,6 +194,18 @@ margin: 10px;
 
 .terms.policy{
   text-align: left;
+}
+
+.valid-age{
+  padding: 10px;
+}
+.valid-age label{
+    color: black;
+    font-size: small;
+}
+
+.valid-age input{
+color: white;
 }
 
 
