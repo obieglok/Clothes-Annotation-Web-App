@@ -1,3 +1,64 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#root {
+  text-align: center;
+  
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+
+#brand{
+  font-family:'Poppins', sans-serif;
+  font-weight: 700;
+  text-shadow: 1.5px 1.5px 1.5px rgb(59, 59, 59);
+  padding-left: 1rem;
+  padding-top: 0.6rem;
+  position:absolute;
+  left:0;
+  top:0;
+}
+
+
+#mobile-demo{
+  max-width:150px;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.about div {
+  border-bottom-style: groove;
+}
+.about {
+  padding-bottom: 3em;
+  
+}
+
+#adminSideNav button{
+  width : 5em;
+}
+.adminSideNav {
+  padding-left: 2em;
+}
+.card{
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+
 /* login box form */
 
 .frm1 {
@@ -233,6 +294,7 @@ margin: 10px;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  min-width: 100vw;
   background-image: url("https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-position: center;
   background-size:cover;
