@@ -20,27 +20,27 @@ onChange = e=>{
         <container className="register">
         <div class="lgn details">
         <div class="terms policy">
-        <h1>END USER LICENSE AGREEMENT</h1>
+        <h5>END USER LICENSE AGREEMENT</h5>
         <p>Last updated 16/04/2021.<br/>
         fano is licensed to You (End-User) by fano for use only under the terms of this License Agreement.<br/>
         By using the application and services and any update thereto (as permitted by this License Agreement),
         You indicate that You agree to be bound by all of the terms and conditions of this License Agreement, and that You accept this License Agreement.
         </p>
-        <h1>
+        <h5>
         1. THE APPLICATION FANO 
-        </h1>
+        </h5>
         <p>
         (hereinafter: Application) is a piece of software created to populate image data with relevant data via user contibuted annotations.<br/>
         </p>
 
-        <h1>
+        <h5>
         2. NO MAINTENANCE OR SUPPORT<br/>
-        </h1>
+        </h5>
         Fano is not obligated, expressed or implied, to provide any maintenance, technical or other support for the Application. <br/>
 
-        <h1>
+        <h5>
         3. USER GENERATED CONTRIBUTIONS
-        </h1>
+        </h5>
         <p>
         By contributing to Fano You represent and warrant that:<br/>
         3.1 Your Contributions are not false, inaccurate, or misleading. <br/>
@@ -61,9 +61,9 @@ onChange = e=>{
         
         </p>
         
-        <h1>
+        <h5>
         4. CONTRIBUTION LICENSE
-        </h1>
+        </h5>
 
         You agree that we may access, store, process, and use any information and personal data that you
         provide following the terms of the Privacy Policy. By submitting suggestions of other feedback regarding the Application, you agree that we can use and
@@ -74,9 +74,9 @@ onChange = e=>{
         4.3 you expressly agree to exonerate us from any and all responsibility and to refrain from any legal action against us regarding your Contributions. <br/>
 
 
-        <h1>
+        <h5>
         5. WARRANTY 
-        </h1>
+        </h5>
         5.1 Licensor warrants that the Application is free of spyware, trojan horses, viruses, or any other malware.<br/>
         Licensor warrants that the Application works as described in the user documentation. <br/>
         5.2 No warranty is provided for the Application that is not executable on the device, that has been
@@ -92,9 +92,9 @@ onChange = e=>{
 
 
 
-        <h1>
+        <h5>
         6. PRODUCT CLAIMS
-        </h1>
+        </h5>
         <p>
         Fano and the End-User acknowledge that Fano is responsible for addressing any claims of the End-User or any third party relating to the licensed Application or the End-User’s possession and/or use of that licensed Application, including, but not limited to: <br/>
         - product liability claims <br/>
@@ -103,24 +103,24 @@ onChange = e=>{
 
 
 
-        <h1>
+        <h5>
         7. LEGAL COMPLIANCE
-        </h1>
+        </h5>
         <p>
         You represent and warrant that You are not listed on any Irish Government list of prohibited or restricted parties. <br/>
         </p>
 
-        <h1>
+        <h5>
         8. CONTACT INFORMATION
-        </h1>
+        </h5>
         <p>
         For general inquiries, complaints, questions or claims concerning the licensed Application, please contact us via the relevant contact information provided on the contact page<br/>
         </p>
 
 
-        <h1>
+        <h5>
         9. TERMINATION
-        </h1>
+        </h5>
         <p>
         The license is valid until terminated by Fano or by You. Your rights under this license will terminate
         automatically and without notice from Fano if You fail to adhere to any term(s) of this license.<br/> 
@@ -128,17 +128,17 @@ onChange = e=>{
         </p>
 
 
-        <h1>
+        <h5>
         10. APPLICABLE LAW
-        </h1>
+        </h5>
         <p>
 
         This license agreement is governed by the laws of the republic of Ireland excluding its conflicts of law rules.
         </p>
 
-        <h1>
+        <h5>
         11. MISCELLANEOUS
-        </h1>
+        </h5>
         <p>
         11.1 If any of the terms of this agreement should be or become invalid, the validity of the remaining
         provisions shall not be affected. <br/>
@@ -147,7 +147,7 @@ onChange = e=>{
         11.4 The preceding clause can only be waived in writing<br/>
         </p>
                 
-        <h1>12. AGE REQUIREMENTS</h1>
+        <h5>12. AGE REQUIREMENTS</h5>
         <p>
           12.1 If you’re under age 18, which is the required age to manage and own a Fano account, you are not permitted
           under any circumstance to own a fano account.
