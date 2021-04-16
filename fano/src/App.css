@@ -192,6 +192,11 @@ margin: 10px;
   /* color: white !important; */
 }
 
+.terms.policy{
+  text-align: left;
+}
+
+
 .card {
   border-radius: 30px !important;
 }
