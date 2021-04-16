@@ -11,6 +11,8 @@ import Register from './components/Register';
 import UploadFile from './components/AdminDashboard/UploadFile';
 import AdminDashboard from './components/AdminDashboard/AdminDashboard';
 import annotate from './components/annotate';
+import terms from './components/terms';
+import PrivacyPolicy from './components/PrivacyPolicy';
 
 
 
@@ -32,6 +34,8 @@ function App() {
           <Route exact path='/uploadFile' component={UploadFile} />
           <Route exact path='/adminDash' component={AdminDashboard} />
           <Route exact path='/annotate' component ={annotate} />
+          <Route exact path='/terms' component ={terms} />
+          <Route exact path='/policy' component ={PrivacyPolicy} />
         </Switch>
       </div>
       </BrowserRouter>
