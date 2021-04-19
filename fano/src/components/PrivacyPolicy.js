@@ -18,7 +18,8 @@ onChange = e=>{
     return (
       <div className="body-sign-in-register">
         <container className="register">
-
+        <div class="lgn details">
+          
 <div class= "terms policy">
 
 <h5>Privacy Policy</h5>
@@ -155,7 +156,7 @@ onChange = e=>{
 <ul>
 <li>By visiting this page on our website: <a href="https://fano.com/contact" rel="external nofollow noopener" target="_blank">https://fano.com/contact</a></li>
 </ul>
-</div>
+</div></div>
 
 
       </container>
