@@ -91,20 +91,21 @@ class Register extends react.Component {
 
                 <div class="form-row-btn">
                   <div class="consent-span">
-                    by registering, I agree to the 
+                    
+                    by registering, I agree to the
                     <a href="/policy"> Privacy Statement </a>
-                     and
-                    <a href="/terms"> Terms of service </a> 
+                    and
+                    <a href="/terms"> Terms of service </a>
                   </div>
-                  
-
 
                   <div class="valid-age">
-                    <input type="checkbox" id="age-rq" name="age-rq" />
-                    <label for="age-rq"> by checking this box you are 
-                      agreeing that you are at least 18 years of age.</label>
+                  <label for="age-rq">
+                      <input type="checkbox" id="age-rq" name="age-rq" class="filled-in"/>
+                      <span>by checking this box you are agreeing that you are at
+                      least 18 years of age.</span>
+                    </label>
+                    
                   </div>
-
 
                   <div class="lgn-c">
                     <button
