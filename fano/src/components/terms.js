@@ -3,17 +3,8 @@ import react from "react";
 
 class Terms extends react.Component {
 
-
-state ={
-  isLegalAge:false
-};
-
-onChange = e=>{
-  this.setState({isLegalAge:e.target.checked})
-}
   render() {
 
-    const {isLegalAge} =this.state;
 
     return (
       <div className="body-sign-in-register">

@@ -4,12 +4,19 @@ import { grid } from "@material-ui/core";
 import { connect } from "react-redux";
 import { signUp } from "../store/actions/authActions";
 import { Redirect } from "react-router-dom";
+import { Box } from "@material-ui/core";
 
 class Register extends react.Component {
   state = {
     email: "",
     password: "",
+    checked:false,
   };
+
+  changeAgeValidity(){
+    this.setState({checked:!this.state.checked})
+    console.log("you are at least 18:"+this.state.checked)
+  }
 
   handleChange = (e) => {
     this.setState({
@@ -23,11 +30,18 @@ class Register extends react.Component {
     this.props.signUp(this.state);
   };
 
+ 
+
+
   render() {
     const { authError, auth } = this.props;
     if (auth.uid) {
       return <Redirect to="/" />;
     }
+
+    let fake_box = this.state.checked ? "fake-box-2" : "fake-box-1";
+    let age_text = this.state.checked ? "X" : " ";
+        
     return (
       <div className="body-sign-in-register">
         <container className="register">
@@ -100,10 +114,15 @@ class Register extends react.Component {
 
 
                   <div class="valid-age">
-                    <input type="checkbox" id="age-rq" name="age-rq" />
-                    <label for="age-rq"> by checking this box you are 
-                      agreeing that you are at least 18 years of age.</label>
-                  </div>
+                    <div class="age-verif">
+                    <div class="age-1">
+                       by checking this box you are agreeing that you are at least 18 years of age.
+                      </div> 
+                        <div class={fake_box} onClick={this.changeAgeValidity.bind(this)}>
+                        <p>{age_text}</p>
+                      </div>
+                   </div>
+                    </div>
 
 
                   <div class="lgn-c">

@@ -16,6 +16,7 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 
 
 
+
 function App() {
   return (
     [
@@ -36,6 +37,7 @@ function App() {
           <Route exact path='/annotate' component ={annotate} />
           <Route exact path='/terms' component ={terms} />
           <Route exact path='/policy' component ={PrivacyPolicy} />
+          
         </Switch>
       </div>
       </BrowserRouter>
