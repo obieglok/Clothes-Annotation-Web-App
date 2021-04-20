@@ -1,6 +1,5 @@
 import react from "react";
 
-import { grid } from "@material-ui/core";
 import { connect } from "react-redux";
 import { signUp } from "../store/actions/authActions";
 import { Redirect } from "react-router-dom";
@@ -30,14 +29,14 @@ class Register extends react.Component {
     }
     return (
       <div className="body-sign-in-register">
-        <container className="register">
-          <div class="lgn details">
-            <div class="lgn-inner">
-              <form class="frm1" onSubmit={this.handleSubmit}>
-                <div class="form-row">
+        <div className="register">
+          <div className="lgn details">
+            <div className="lgn-inner">
+              <form className="frm1" onSubmit={this.handleSubmit}>
+                <div className="form-row">
                   <input
                     type="text"
-                    class="form-c"
+                    className="form-c"
                     name="firstName"
                     id="firstName"
                     placeholder="First Name"
@@ -45,10 +44,10 @@ class Register extends react.Component {
                     onChange={this.handleChange}
                   />
                 </div>
-                <div class="form-row">
+                <div className="form-row">
                   <input
                     type="text"
-                    class="form-c"
+                    className="form-c"
                     name="lastName"
                     id="lastName"
                     placeholder="Last Name"
@@ -56,10 +55,10 @@ class Register extends react.Component {
                     onChange={this.handleChange}
                   />
                 </div>
-                <div class="form-row">
+                <div className="form-row">
                   <input
                     type="email"
-                    class="form-c"
+                    className="form-c"
                     name="email"
                     id="email"
                     placeholder="Email"
@@ -67,10 +66,10 @@ class Register extends react.Component {
                     onChange={this.handleChange}
                   />
                 </div>
-                <div class="form-row">
+                <div className="form-row">
                   <input
                     type="password"
-                    class="form-c"
+                    className="form-c"
                     name="password"
                     id="password"
                     placeholder="Password"
@@ -78,10 +77,10 @@ class Register extends react.Component {
                     onChange={this.handleChange}
                   />
                 </div>
-                <div class="form-row">
+                <div className="form-row">
                   <input
                     type="password"
-                    class="form-c"
+                    className="form-c"
                     name="password"
                     placeholder="Re-enter password"
                     required
@@ -89,8 +88,8 @@ class Register extends react.Component {
                   />
                 </div>
 
-                <div class="form-row-btn">
-                  <div class="consent-span">
+                <div className="form-row-btn">
+                  <div className="consent-span">
                     
                     by registering, I agree to the
                     <a href="/policy"> Privacy Statement </a>
@@ -98,18 +97,17 @@ class Register extends react.Component {
                     <a href="/terms"> Terms of service </a>
                   </div>
 
-                  <div class="valid-age">
-                  <label for="age-rq">
-                      <input type="checkbox" id="age-rq" name="age-rq" class="filled-in" required/>
+                  <div className="valid-age">
+                  <label htmlFor="age-rq">
+                      <input type="checkbox" id="age-rq" name="age-rq" className="filled-in" required/>
                       <span>by checking this box you are agreeing that you are at
                       least 18 years of age.</span>
                     </label>
                     
                   </div>
 
-                  <div class="lgn-c">
+                  <div className="lgn-c">
                     <button
-                      submit={this.handleSubmit}
                       className="btn waves-effect waves-light blue accent-4 blockButton"
                     >
                       {" "}
@@ -130,7 +128,7 @@ class Register extends react.Component {
               </form>
             </div>
           </div>
-        </container>
+        </div>
       </div>
     );
   }
@@ -150,10 +148,3 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Register);
-
-{
-  /* <label for="fname">First name:</label><br/>
-     <input type="text" id="fname" name="fname"/><br/>
-     <label for="lname">Last name:</label><br/>
-     <input type="text" id="lname" name="lname"/> */
-}

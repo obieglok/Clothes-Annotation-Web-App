@@ -9,7 +9,7 @@ class UploadFile extends Component {
     name: "",
   };
   handleChange = (e) => {
-    if (e.target.id == "file") {
+    if (e.target.id === "file") {
       this.setState(
         {
           [e.target.id]: e.target.files[0],

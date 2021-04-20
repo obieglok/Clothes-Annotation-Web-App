@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import M from 'materialize-css/dist/js/materialize.min.js';
-import { Link } from 'react-router-dom';
 import SignedInLinks from './SignedInLinks';
 import SignedOutLinks from './SignedOutLinks';
 import {connect} from 'react-redux'
@@ -13,7 +12,7 @@ class Navbar extends Component {
                 <div>
                     <nav  className="navbarblur">
                         <div className="nav-wrapper" >
-                            <a href="/"  id="brand"><img src={LogoImage} width="120" height="auto">
+                            <a href="/"  id="brand"><img src={LogoImage} width="120" height="auto" alt="logo">
                             </img></a>
                             <a href="#" data-target="mobile-demo" className=" sidenav-trigger right"><i className=" material-icons iconBG">menu</i></a>
                             <ul className="right hide-on-med-and-down">

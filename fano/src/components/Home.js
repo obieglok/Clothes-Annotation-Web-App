@@ -1,6 +1,5 @@
 import React from 'react'
 import UserProfile from './UserProfile'
-import {signIn} from '../store/actions/imageActions'
 import {connect} from 'react-redux'
 import { Redirect } from 'react-router-dom'
 const Home = (props) => {

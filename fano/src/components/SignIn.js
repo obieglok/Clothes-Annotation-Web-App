@@ -1,5 +1,4 @@
 import react from "react";
-import { grid } from "@material-ui/core";
 import { connect } from "react-redux";
 import { signIn } from "../store/actions/authActions";
 import { Redirect } from "react-router-dom";
@@ -28,7 +27,7 @@ class SignIn extends react.Component {
     return (
       <div className="body-sign-in-register">
 
-      <container className="main-c">
+      <div className="main-c">
         
         <div className="lgn details">
           <div className="lgn-inner ">
@@ -78,7 +77,7 @@ class SignIn extends react.Component {
             </form>
           </div>
         </div>
-      </container>
+      </div>
       </div>
     );
   }

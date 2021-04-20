@@ -2,24 +2,12 @@ import react from "react";
 
 
 class Terms extends react.Component {
-
-
-state ={
-  isLegalAge:false
-};
-
-onChange = e=>{
-  this.setState({isLegalAge:e.target.checked})
-}
   render() {
-
-    const {isLegalAge} =this.state;
-
     return (
       <div className="body-sign-in-register">
-        <container className="register">
-        <div class="lgn details">
-        <div class="terms policy">
+        <div className="register">
+        <div className="lgn details">
+        <div className="terms policy">
         <h5>END USER LICENSE AGREEMENT</h5>
         <p>Last updated 16/04/2021.<br/>
         fano is licensed to You (End-User) by fano for use only under the terms of this License Agreement.<br/>
@@ -157,7 +145,7 @@ onChange = e=>{
                
       </div>
       </div>
-      </container>
+      </div>
       </div>
     );
   }

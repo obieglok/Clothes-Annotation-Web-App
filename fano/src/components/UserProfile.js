@@ -1,37 +1,35 @@
 import React from "react";
 import { connect } from "react-redux";
-import { compose } from "redux";
-import { firestoreConnect } from "react-redux-firebase";
 import { Link } from "react-router-dom";
 
 const UserProfile = (props) => {
   const { profile } = props;
   return (
     <div className="userpage">
-      <h5 class="center-align">{`Welcome back, ${profile.firstName}`}</h5>
+      <h5 className="center-align">{`Welcome back, ${profile.firstName}`}</h5>
       <div className="overview-card">
-        <div class="row">
-          <div class="col s12 m6">
-            <div class="card blue darken-2 hoverable">
-              <div class="card-content white-text">
-                <span class="card-title">Overview</span>
-                <h6 class="left-align">
+        <div className="row">
+          <div className="col s12 m6">
+            <div className="card blue darken-2 hoverable">
+              <div className="card-content white-text">
+                <span className="card-title">Overview</span>
+                <h6 className="left-align">
                   {`Current Annotations: ${profile.annotationsCounter}`}
                 </h6>
-                <h6 class="left-align">
+                <h6 className="left-align">
                   {`Current Points: ${profile.annotationsCounter * 13}`}
                 </h6>
               </div>
             </div>
           </div>
-          <div class="col s12 m6">
-            <div class="card blue darken-3 hoverable">
-              <div class="card-content white-text">
-                <span class="card-title">Performance this week</span>
-                <h6 class="left-align">
+          <div className="col s12 m6">
+            <div className="card blue darken-3 hoverable">
+              <div className="card-content white-text">
+                <span className="card-title">Performance this week</span>
+                <h6 className="left-align">
                   {`Current Annotations: ${profile.annotationsCounter}`}
                 </h6>
-                <h6 class="left-align">
+                <h6 className="left-align">
                   {`Current Points: ${profile.annotationsCounter * 13}`}
                 </h6>
               </div>

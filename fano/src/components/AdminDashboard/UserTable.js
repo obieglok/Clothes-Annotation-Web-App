@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { uploadImages } from "../../store/actions/imageActions";
-import { Redirect, withRouter } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { compose } from "redux";
 import { firestoreConnect } from "react-redux-firebase";
 import { makeAdmin, removeAdmin } from "../../store/actions/authActions";

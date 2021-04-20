@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <div className="container userpage marginFromFooter center">
-      <h5 class="center-align">Contact Details Below</h5>
+      <h5 className="center-align">Contact Details Below</h5>
       <div className="row cardsAboutContact">
         <div >
           <div className="card cardSettings">
