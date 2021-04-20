@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import {
   commitAnnotation,
   fetchNextImage,
+  skipNextImage,
 } from "../store/actions/imageActions";
 
 class annotate extends Component {
@@ -85,7 +86,7 @@ class annotate extends Component {
               </form>
               <button
                 className="btn waves-effect waves-light teal accent-4 skipButton annoateButtons"
-                onClick={() => this.props.fetchNextImage()}
+                onClick={() => this.props.skipImage()}
               >
                 Skip
               </button>
@@ -108,6 +109,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(commitAnnotation(annotation));
     },
     fetchNextImage: () => dispatch(fetchNextImage()),
+    skipImage: () => dispatch(skipNextImage())
   };
 };
 
