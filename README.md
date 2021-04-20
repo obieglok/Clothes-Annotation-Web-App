@@ -5,6 +5,7 @@ SWENG 2021 Group 2 - Project to create a web application that can be used to ann
 The application allows an admin to upload images of clothes with text to the database, that later can be annotated by Fano users.
 The users will be asked to carefully read the text on the t-shirt and count the number of colours visible on the shirt, before entering them into the corresponding fields. 
 The admin will be able to export all the annotations to a json format. 
+Click on the below image to watch our Demo. 
 [![Fano Video](https://i.ibb.co/wzVJ04Z/fano-image.png)](https://www.youtube.com/watch?v=z_H_fUal-ss "Fano Video")
 
 # Getting Started with Fano
