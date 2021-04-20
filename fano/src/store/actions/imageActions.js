@@ -30,6 +30,36 @@ export const fetchNextImage = () => {
     }
 }
 
+export const skipNextImage = () => {
+    return async(dispatch, getState, { getFirebase, getFirestore }) => {
+        const firestore = getFirestore()
+        const firebase = getFirebase()
+        const state = getState()
+        console.log("fetching")
+        var query = firestore.collection("images")
+            .where('__name__', "!=", state.image.fetchedImage.imageId)
+            .limit(1)
+
+        try {
+            const image = await query.get()
+            if (image.docs) {
+                const { imageName } = image.docs[0].data()
+                const id = image.docs[0].id
+                    // consider refactoring to use gs// url to reference object
+                const imageUrl = await firebase.storage().ref()
+                    .child("images").child(imageName)
+                    .getDownloadURL()
+                dispatch({ type: "IMAGE_FETCH_SUCCESSFUL", imageUrl, imageId: id, imageName })
+            } else {
+                console.log("not here")
+            }
+        } catch (err) {
+            console.log(err)
+            dispatch({ type: "IMAGE_FETCH_ERROR", imageUrl: null, imageId: null, err })
+        }
+    }
+}
+
 /*
 Commits annotation of an image to database and updates annotation counters
 annotation object structure: 
