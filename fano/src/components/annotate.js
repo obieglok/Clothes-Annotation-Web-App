@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from 'react-router-dom';
 
 import { connect } from "react-redux";
 import {
@@ -8,6 +9,7 @@ import {
 } from "../store/actions/imageActions";
 
 class annotate extends Component {
+  
   state = {
     annotationText: "",
     colorCount: 1,
@@ -37,6 +39,10 @@ class annotate extends Component {
   };
 
   render() {
+    const {auth} = this.props
+    if (!auth.uid) {
+        return <Redirect to='/signIn' />
+    }
     return (
       <div className="container annotationPage">
         <div className="row">
@@ -101,6 +107,7 @@ class annotate extends Component {
 const mapStateToProps = (state) => ({
   annotationsJson: state.image.annotationsJson,
   fetchedImage: state.image.fetchedImage,
+  auth: state.firebase.auth
 });
 
 const mapDispatchToProps = (dispatch) => {

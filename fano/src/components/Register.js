@@ -100,7 +100,7 @@ class Register extends react.Component {
 
                   <div class="valid-age">
                   <label for="age-rq">
-                      <input type="checkbox" id="age-rq" name="age-rq" class="filled-in"/>
+                      <input type="checkbox" id="age-rq" name="age-rq" class="filled-in" required/>
                       <span>by checking this box you are agreeing that you are at
                       least 18 years of age.</span>
                     </label>
